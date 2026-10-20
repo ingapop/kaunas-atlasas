@@ -1,0 +1,91 @@
+id,nr,pavadinimas,seimo_apygarda,seniunija,seniunijos_gyv_dalis_proc,plotas_km2,rinkejai_2024,gyventojai_2021,gyv_0_14,gyv_15_64,gyv_65_plius
+716958,12,Demokratų,Aleksoto–Vilijampolės,Vilijampolės,100.0,0.31789,1797,1376,190,853,333
+716704,13,Linkuvos,Aleksoto–Vilijampolės,Vilijampolės,100.0,0.51442,2396,3059,400,1916,744
+716960,15,Sąjungos,Aleksoto–Vilijampolės,Vilijampolės,100.0,0.61907,2795,4139,578,2615,946
+716962,16,Dobilo,Aleksoto–Vilijampolės,Vilijampolės,98.8,0.81288,2560,3535,465,2261,809
+716964,19,Seredžiaus,Aleksoto–Vilijampolės,Vilijampolės,99.9,1.11902,1476,1727,218,1151,357
+716966,21,Veršvų,Aleksoto–Vilijampolės,Vilijampolės,94.8,2.87385,4647,5457,880,3610,967
+713766,22,Žagarės,Aleksoto–Vilijampolės,Vilijampolės,99.3,7.02342,2061,3036,446,1969,621
+713252,23,Bivylių,Aleksoto–Vilijampolės,Šilainių,98.9,2.54037,3942,4641,1138,3121,382
+716968,24,Kaniūkų,Aleksoto–Vilijampolės,Šilainių,100.0,2.23312,1799,2874,533,2017,324
+713098,25,Girios alėjos,Aleksoto–Vilijampolės,Šilainių,100.0,4.27824,2848,2871,853,1918,99
+713768,27,J. Dobkevičiaus,Aleksoto–Vilijampolės,Aleksoto,83.1,6.76479,4275,4925,727,3172,1027
+716974,127,Romainių,Aleksoto–Vilijampolės,Šilainių,100.0,3.76429,2451,2800,671,1807,323
+714752,33,Tekstilininkų,Centro–Žaliakalnio,Centro-Žaliakalnio,97.6,0.99631,1800,3100,504,2042,554
+717180,36,Maironio,Centro–Žaliakalnio,Centro-Žaliakalnio,100.0,0.44721,1604,1541,252,994,295
+716976,37,A. Mackevičiaus,Centro–Žaliakalnio,Centro-Žaliakalnio,100.0,0.28222,1001,947,145,590,212
+716978,40,Radvilėnų,Centro–Žaliakalnio,Petrašiūnų-Gričiupio,98.4,0.46004,1959,2450,280,1445,726
+716980,42,J. Jablonskio,Centro–Žaliakalnio,Centro-Žaliakalnio,100.0,0.38149,1707,1743,232,1063,448
+716982,43,Aušros,Centro–Žaliakalnio,Centro-Žaliakalnio,95.0,0.70965,2042,2839,415,1791,634
+716984,45,Senojo tresto,Centro–Žaliakalnio,Centro-Žaliakalnio,97.6,1.07605,2612,4403,632,2857,914
+716986,49,Miško,Centro–Žaliakalnio,Centro-Žaliakalnio,99.5,1.34192,2859,3842,581,2381,880
+716992,50,Jonavos,Centro–Žaliakalnio,Centro-Žaliakalnio,100.0,0.72716,724,694,108,431,155
+715400,52,L. Karsavino,Centro–Žaliakalnio,Centro-Žaliakalnio,100.0,0.92351,3103,3198,425,1992,782
+717034,54,Algirdo,Centro–Žaliakalnio,Centro-Žaliakalnio,100.0,1.34756,2419,3023,434,1871,718
+717040,61,Gerovės,Centro–Žaliakalnio,Dainavos,72.6,0.54823,3763,4242,577,2646,1019
+717042,63,Aukštaičių,Centro–Žaliakalnio,Centro-Žaliakalnio,89.4,2.32066,4141,6497,977,4014,1505
+717002,109,Žiburio,Centro–Žaliakalnio,Panemunės-Šančių,100.0,0.8232,2908,4128,598,2603,927
+714754,110,Breslaujos,Centro–Žaliakalnio,Panemunės-Šančių,100.0,0.90005,3011,3579,519,2280,779
+714328,125,Kazliškių,Garliavos,Aleksoto,100.0,2.9519,1251,1154,189,756,209
+717036,56,Purienų,Kalniečių,Centro-Žaliakalnio,90.4,0.85134,3040,3724,520,2542,662
+717038,58,Žeimenos,Kalniečių,Eigulių,86.7,0.67072,3835,5379,889,3113,1377
+714826,60,Versmės,Kalniečių,Dainavos,86.1,0.52526,2498,2788,416,1786,586
+714646,64,Aukuro,Kalniečių,Eigulių,99.9,7.20647,3386,3244,488,1987,770
+717044,65,Vaidilutės,Kalniečių,Eigulių,100.0,0.12034,1449,2308,369,1384,555
+714330,66,Šiaurės,Kalniečių,Eigulių,100.0,0.2342,3096,4017,624,2434,960
+717046,67,S. Žukausko,Kalniečių,Eigulių,100.0,0.24584,3231,3949,574,2316,1059
+714240,68,Statybininkų,Kalniečių,Eigulių,98.7,0.6591,3372,5495,812,3131,1552
+714242,69,Rasos,Kalniečių,Eigulių,99.9,0.34999,1644,2821,381,1614,826
+716314,70,P. Plechavičiaus,Kalniečių,Eigulių,100.0,0.31452,3283,3692,542,2100,1049
+716316,71,K. Škirpos,Kalniečių,Eigulių,99.9,3.45954,3531,2996,457,1804,735
+714244,72,P. Lukšio,Kalniečių,Eigulių,99.7,0.26756,3262,5104,751,2841,1512
+716970,28,Veiverių,Panemunės,Aleksoto,100.0,2.62378,1583,1680,255,1089,336
+717010,29,Birutės,Panemunės,Aleksoto,100.0,3.99366,4156,5410,1103,3541,767
+714326,30,Julijanavos,Panemunės,Aleksoto,100.0,1.14381,1979,1957,312,1241,404
+714230,31,Piliakalnio,Panemunės,Aleksoto,99.3,3.29269,2489,3189,550,2058,580
+714248,105,Sodų,Panemunės,Panemunės-Šančių,100.0,1.45983,3239,3842,532,2537,773
+714834,106,Šančių,Panemunės,Panemunės-Šančių,100.0,1.3037,2277,3365,510,2262,594
+716998,107,Drobės,Panemunės,Panemunės-Šančių,100.0,1.65666,2053,2070,251,1361,458
+717000,108,Skuodo,Panemunės,Panemunės-Šančių,100.0,1.27458,2144,2421,383,1638,400
+714836,117,Vaidoto,Panemunės,Panemunės-Šančių,100.0,2.07419,2361,3195,460,2046,689
+714678,118,Pušų,Panemunės,Panemunės-Šančių,100.0,2.20921,2515,3032,445,1910,677
+717006,120,Vičiūnų,Panemunės,Panemunės-Šančių,100.0,7.51941,2002,2207,341,1403,462
+714120,122,Rokų,Panemunės,Panemunės-Šančių,99.7,6.703,2986,3355,562,2183,610
+717008,123,Vaišvydavos,Panemunės,Panemunės-Šančių,100.0,7.53448,3160,3522,730,2253,539
+714258,126,Tirkiliškių,Panemunės,Aleksoto,100.0,3.32229,2807,3711,744,2434,533
+714246,38,Varpo,Petrašiūnų–Gričiupio,Petrašiūnų-Gričiupio,100.0,0.47117,3098,4349,598,2559,1192
+713786,89,Specialistų,Petrašiūnų–Gričiupio,Dainavos,100.0,0.18305,2327,2938,427,1825,686
+716328,91,Taikos,Petrašiūnų–Gričiupio,Dainavos,100.0,0.29399,1982,2743,429,1686,628
+716330,92,Vyturio,Petrašiūnų–Gričiupio,Dainavos,99.9,0.42051,2172,3273,439,2012,821
+714684,93,Butrimonių,Petrašiūnų–Gričiupio,Dainavos,97.7,0.14609,1903,2482,340,1558,584
+716988,94,Studentų,Petrašiūnų–Gričiupio,Petrašiūnų-Gričiupio,99.1,1.23102,2442,3532,510,2254,768
+716332,96,Dujotiekio,Petrašiūnų–Gričiupio,Petrašiūnų-Gričiupio,100.0,1.75797,2589,3800,571,2380,848
+716334,97,Girstučio,Petrašiūnų–Gričiupio,Petrašiūnų-Gričiupio,100.0,0.12965,1763,2409,320,1524,565
+716994,98,Pašilės,Petrašiūnų–Gričiupio,Petrašiūnų-Gričiupio,99.6,0.34536,2721,3203,450,2030,723
+713788,99,Knygnešių,Petrašiūnų–Gričiupio,Petrašiūnų-Gričiupio,99.6,3.78478,2256,3126,435,2072,619
+714686,101,Palemono,Petrašiūnų–Gričiupio,Petrašiūnų-Gričiupio,100.0,9.60067,3199,3622,482,2402,738
+716996,111,Nemuno,Petrašiūnų–Gričiupio,Petrašiūnų-Gričiupio,100.0,0.37391,1972,2775,432,1762,581
+717004,114,Šilo,Petrašiūnų–Gričiupio,Petrašiūnų-Gričiupio,100.0,2.56577,3069,3562,554,2374,634
+714118,116,Buriuotojų,Petrašiūnų–Gričiupio,Petrašiūnų-Gričiupio,100.0,8.23597,3787,5311,750,3515,1046
+713118,77,Buitininkų,Savanorių,Dainavos,99.9,2.71712,3979,5431,885,3506,1040
+716318,78,Partizanų,Savanorių,Dainavos,100.0,0.33793,2804,3740,501,2232,1006
+714654,79,Pramonės,Savanorių,Dainavos,99.8,0.49858,2087,3254,468,2186,600
+716320,80,Dainavos,Savanorių,Dainavos,100.0,0.56719,2727,2640,361,1582,697
+713220,81,J. Urbšio,Savanorių,Dainavos,100.0,0.21227,2070,2435,350,1507,578
+716322,82,Sartų,Savanorių,Dainavos,100.0,0.27218,2302,2128,257,1306,565
+716324,83,A. Timinskio,Savanorių,Dainavos,100.0,0.18787,2212,2690,356,1717,618
+713236,84,Nepriklausomybės,Savanorių,Dainavos,100.0,0.21216,1817,2770,356,1702,713
+714656,85,Vytauto,Savanorių,Dainavos,100.0,0.24941,2874,4574,641,2775,1158
+716326,86,Atžalyno,Savanorių,Dainavos,100.0,0.33016,3169,2990,432,1830,728
+714682,88,V. Krėvės,Savanorių,Dainavos,100.0,0.12351,1970,2227,295,1371,562
+716940,2,Sargėnų,Šilainių,Šilainių,100.0,4.52902,4620,5841,1042,3826,973
+716942,3,Vėtrungės,Šilainių,Šilainių,100.0,0.2214,2959,3464,554,2098,812
+716944,4,Rasytės,Šilainių,Šilainių,85.8,0.61167,2779,4515,689,2861,965
+716946,5,Šarkuvos,Šilainių,Šilainių,100.0,0.50587,3921,3881,635,2418,827
+716948,7,Žemaičių,Šilainių,Šilainių,100.0,0.45211,3669,5350,850,3369,1131
+713192,8,Baltų,Šilainių,Šilainių,100.0,0.67891,3599,4166,781,2766,619
+713210,9,Baltijos,Šilainių,Šilainių,100.0,0.30825,3349,4566,762,2951,852
+716824,10,Žiemgalių,Šilainių,Šilainių,100.0,2.07474,4545,3790,723,2587,480
+716950,11,Milikonių,Šilainių,Vilijampolės,96.5,1.10262,2195,2590,376,1753,461
+713764,18,Apuolės,Šilainių,Šilainių,100.0,0.72037,975,2431,335,1657,438
+716972,121,Ąžuolo,Šilainių,Šilainių,99.9,0.31434,3379,4311,683,2938,691

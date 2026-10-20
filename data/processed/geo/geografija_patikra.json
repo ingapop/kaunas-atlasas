@@ -1,0 +1,64 @@
+{
+ "seniunijos_n": 9,
+ "apylinkes_n": 90,
+ "city_area_km2": 156.885,
+ "seniunijos_vs_city_symdiff_km2": 0.0,
+ "apylinkes_outside_city_km2": 0.0155,
+ "city_not_covered_by_apylinkes_km2": 0.0181,
+ "census_cells": 6488,
+ "census_pop": 303202,
+ "rinkejai_2024_total": 240610,
+ "amziaus_grupes_miestas": {
+  "vidutinio_amziaus_metodas": [
+   47037,
+   192065,
+   64101
+  ],
+  "vidutinio_amziaus_metodas_proc": [
+   15.51,
+   63.35,
+   21.14
+  ],
+  "lygaus_padalijimo_metodas_iki_2026_10_20": [
+   49114,
+   188645,
+   65443
+  ],
+  "lygaus_padalijimo_metodas_proc": [
+   16.2,
+   62.22,
+   21.58
+  ],
+  "osp_2021_01_01": [
+   46154,
+   189378,
+   63221
+  ],
+  "osp_2021_01_01_proc": [
+   15.45,
+   63.39,
+   21.16
+  ],
+  "osp_grupiu_vid_amzius": [
+   7.36,
+   41.64,
+   75.87
+  ]
+ },
+ "alloc_seniunijos": {
+  "orphan_cells": 57,
+  "orphan_pop": 543,
+  "level": "seniunijos"
+ },
+ "alloc_apylinkes": {
+  "orphan_cells": 57,
+  "orphan_pop": 543,
+  "level": "apylinkes"
+ },
+ "seniunijos_pop_sum": 303202,
+ "apylinkes_pop_sum": 303202,
+ "apylinkes_split_pop_lt95": 8,
+ "rinkejai_2024_seniunijose_suma": 240609,
+ "seniunijos_geojson_bytes": 30054,
+ "apylinkes_geojson_bytes": 117752
+}

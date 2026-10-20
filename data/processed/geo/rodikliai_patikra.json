@@ -1,0 +1,128 @@
+{
+ "osm_dedup_removed": {
+  "sveikata": 7,
+  "kultura": 0,
+  "sportas": 0
+ },
+ "socialiniai_taskai": {
+  "is_viso": 15,
+  "rasti_kaunospc_2026_10_19": 14,
+  "nerasti": [
+   "Dienos centras \"Demencija\""
+  ]
+ },
+ "zaluma_poligonu": 6284,
+ "zaluma_sajunga_ha": 34732.3,
+ "seniunijos_uz_ribu": {
+  "vaistines": 12,
+  "sveikatos_istaigos": 6,
+  "kulturos_centrai_teatrai_kinai": 3,
+  "muziejai": 3,
+  "zaidimu_aikst": 14,
+  "lauko_aikstynai": 83,
+  "sporto_centrai": 2
+ },
+ "apylinkes_uz_ribu": {
+  "vaistines": 12,
+  "sveikatos_istaigos": 6,
+  "kulturos_centrai_teatrai_kinai": 3,
+  "muziejai": 3,
+  "zaidimu_aikst": 14,
+  "lauko_aikstynai": 83,
+  "sporto_centrai": 2
+ },
+ "miestas_seniunijos_vs_apylinkes": {
+  "gyventojai_2021": [
+   303202,
+   303202
+  ],
+  "gyv_0_14_2021": [
+   47037,
+   47037
+  ],
+  "gyv_65_plius_2021": [
+   64101,
+   64101
+  ],
+  "vaikai_istaigos": [
+   189,
+   189
+  ],
+  "darzeliai": [
+   129,
+   129
+  ],
+  "bendrojo_ugdymo_mokyklos": [
+   83,
+   83
+  ],
+  "sveikatos_istaigos": [
+   123,
+   123
+  ],
+  "vaistines": [
+   135,
+   135
+  ],
+  "socialiniu_paslaugu_taskai": [
+   15,
+   15
+  ],
+  "bibliotekos": [
+   17,
+   17
+  ],
+  "muziejai": [
+   50,
+   50
+  ],
+  "kulturos_centrai_teatrai_kinai": [
+   14,
+   14
+  ],
+  "sporto_centrai": [
+   40,
+   40
+  ],
+  "lauko_aikstynai": [
+   472,
+   472
+  ],
+  "zaidimu_aikst": [
+   154,
+   154
+  ],
+  "zaluma_ha": [
+   5164.6,
+   5164.4
+  ],
+  "pesciuju_km": [
+   924.3,
+   924.3
+  ],
+  "gatviu_km": [
+   1727.182,
+   1727.186
+  ],
+  "reno_baigta": [
+   334,
+   334
+  ],
+  "reno_vykdoma": [
+   151,
+   151
+  ],
+  "reno_potencialus": [
+   3823,
+   3823
+  ],
+  "reno_vardiklis": [
+   4308,
+   4308
+  ],
+  "reno_senos_programos": [
+   54,
+   54
+  ]
+ }
+}

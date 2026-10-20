@@ -1,0 +1,5613 @@
+{
+ "sugeneruota": "2026-10-20",
+ "busena": "PARENGTA",
+ "slenksciai": {
+  "min_gyventoju": 1500,
+  "min_vaiku_0_14": 250,
+  "min_reno_vardiklis": 20,
+  "min_gatviu_km": 2.0
+ },
+ "rodikliai": [
+  {
+   "id": "vaikai",
+   "tipas": "Tenka 1 000 vaikų",
+   "skaiciavimas": "darželių ir mokyklų skaičius ÷ 0–14 m. vaikų skaičius × 1 000",
+   "pavadinimas": "Darželiai ir mokyklos",
+   "vienetas": "įstaigų 1 000 vaikų (0–14 m.)",
+   "aprasymas": "Kiek ikimokyklinį ugdymą teikiančių įstaigų ir bendrojo ugdymo mokyklų tenka 1 000 vaikų (0–14 m.).",
+   "kryptis": "daugiau",
+   "saltinis": "Švietimo ir mokslo institucijų registras (ŠMIR); 2021 m. gyventojų ir būstų surašymas, 100 m gardelė (Valstybės duomenų agentūra)",
+   "data": "ŠMIR 2022-08-30; gyventojai 2021-01-01",
+   "faktai": "F-080",
+   "skaitiklis": "skirtingos ikimokyklinio ugdymo įstaigos ir bendrojo ugdymo mokyklos (F-064 taisyklė)",
+   "vardiklis": "0–14 m. gyventojai, 2021",
+   "slenkstis": "vaikų < 250"
+  },
+  {
+   "id": "sveikata",
+   "tipas": "Tenka 10 000 gyventojų",
+   "skaiciavimas": "sveikatos priežiūros įstaigų ir vaistinių skaičius ÷ gyventojų skaičius × 10 000",
+   "pavadinimas": "Sveikatos įstaigos ir vaistinės",
+   "vienetas": "objektų 10 000 gyventojų",
+   "aprasymas": "Kiek OpenStreetMap pažymėtų sveikatos priežiūros įstaigų ir vaistinių tenka 10 000 gyventojų.",
+   "kryptis": "daugiau",
+   "saltinis": "OpenStreetMap; 2021 m. gyventojų ir būstų surašymas, 100 m gardelė (Valstybės duomenų agentūra)",
+   "data": "OpenStreetMap duomenų būklė 2026-10-19",
+   "faktai": "F-070",
+   "skaitiklis": "klinikos, ligoninės, gydytojų kabinetai, odontologijos ir kitos healthcare=* vietos, vaistinės",
+   "vardiklis": "gyventojai, 2021",
+   "slenkstis": "gyventojų < 1 500"
+  },
+  {
+   "id": "socialines_paslaugos",
+   "tipas": "Kiekis",
+   "skaiciavimas": "socialinių paslaugų vietų skaičius teritorijoje (iš gyventojų skaičiaus nedalijama)",
+   "pavadinimas": "Socialinių paslaugų vietos",
+   "vienetas": "vietų skaičius",
+   "aprasymas": "Kiek Kauno miesto socialinių paslaugų centro padalinių ir paslaugų vietų yra teritorijoje. Dalis jų aptarnauja visą miestą.",
+   "kryptis": "kontekstas",
+   "saltinis": "kaunospc.lt kontaktai (adresai patikrinti 2026-10-19)",
+   "data": "adresai 2026-09-14, patikrinta 2026-10-19",
+   "faktai": "F-071",
+   "skaitiklis": "15 paslaugų vietų (14 tebėra kaunospc.lt kontaktuose)",
+   "vardiklis": "nėra (kiekis)",
+   "slenkstis": "netaikoma"
+  },
+  {
+   "id": "zalieji_plotai",
+   "tipas": "Tenka vienam gyventojui",
+   "skaiciavimas": "žaliųjų plotų plotas (m²) ÷ gyventojų skaičius",
+   "pavadinimas": "Žalieji plotai",
+   "vienetas": "m² vienam gyventojui",
+   "aprasymas": "Kiek parkų, miškų, pievų ir kitų žaliųjų plotų tenka vienam gyventojui (persidengiantys plotai skaičiuojami vieną kartą).",
+   "kryptis": "daugiau",
+   "saltinis": "OpenStreetMap; 2021 m. gyventojų ir būstų surašymas, 100 m gardelė (Valstybės duomenų agentūra)",
+   "data": "OpenStreetMap duomenų būklė 2026-10-19",
+   "faktai": "F-072",
+   "skaitiklis": "žaliųjų plotų sąjunga, apkirpta pagal ribas (ha)",
+   "vardiklis": "gyventojai, 2021",
+   "slenkstis": "gyventojų < 1 500"
+  },
+  {
+   "id": "zalieji_plotai_dalis",
+   "tipas": "Teritorijos dalis",
+   "skaiciavimas": "žaliųjų plotų užimamas plotas ÷ visas teritorijos plotas × 100",
+   "pavadinimas": "Žaliųjų plotų dalis",
+   "vienetas": "proc. teritorijos",
+   "aprasymas": "Kokią teritorijos dalį užima žalieji plotai.",
+   "kryptis": "daugiau",
+   "saltinis": "OpenStreetMap; Registrų centras / VRK ribos",
+   "data": "OpenStreetMap duomenų būklė 2026-10-19",
+   "faktai": "F-072",
+   "skaitiklis": "žaliųjų plotų sąjunga (ha)",
+   "vardiklis": "teritorijos plotas",
+   "slenkstis": "netaikoma"
+  },
+  {
+   "id": "pesciuju_takai",
+   "tipas": "Santykis",
+   "skaiciavimas": "pėsčiųjų ir dviračių takų ilgis (km) ÷ vietinių gatvių ilgis (km)",
+   "pavadinimas": "Pėsčiųjų ir dviračių takai",
+   "vienetas": "takų km vienam gatvių km",
+   "aprasymas": "Kiek kilometrų atskirai pažymėtų pėsčiųjų ir dviračių takų tenka vienam vietinių gatvių kilometrui.",
+   "kryptis": "daugiau",
+   "saltinis": "OpenStreetMap",
+   "data": "OpenStreetMap duomenų būklė 2026-10-19",
+   "faktai": "F-073",
+   "skaitiklis": "footway, path, pedestrian, living_street, cycleway (km)",
+   "vardiklis": "residential, service, tertiary, unclassified gatvės (km)",
+   "slenkstis": "gatvių < 2 km"
+  },
+  {
+   "id": "renovacija",
+   "tipas": "Daugiabučių dalis",
+   "skaiciavimas": "renovuotų daugiabučių skaičius ÷ APVA atrinktų daugiabučių skaičius × 100",
+   "pavadinimas": "Renovuoti daugiabučiai",
+   "vienetas": "proc. APVA atrinktų daugiabučių",
+   "aprasymas": "Kokia dalis daugiabučių, kuriuos Aplinkos projektų valdymo agentūra (APVA) laiko galinčiais dalyvauti atnaujinimo programose, jau renovuota.",
+   "kryptis": "daugiau",
+   "saltinis": "APVA „Lietuvos renovacijos žemėlapis“",
+   "data": "2026-10-19",
+   "faktai": "F-074",
+   "skaitiklis": "baigti renovacijos projektai",
+   "vardiklis": "baigti + vykdomi + potencialūs (APVA)",
+   "slenkstis": "vardiklis < 20"
+  },
+  {
+   "id": "renovacija_pradeta",
+   "tipas": "Daugiabučių dalis",
+   "skaiciavimas": "renovuotų ir renovuojamų daugiabučių skaičius ÷ APVA atrinktų daugiabučių skaičius × 100",
+   "pavadinimas": "Renovuoti ir renovuojami daugiabučiai",
+   "vienetas": "proc. APVA atrinktų daugiabučių",
+   "aprasymas": "Kokia dalis APVA atrinktų daugiabučių jau renovuota arba turi suderintą investicijų planą.",
+   "kryptis": "daugiau",
+   "saltinis": "APVA „Lietuvos renovacijos žemėlapis“",
+   "data": "2026-10-19",
+   "faktai": "F-074",
+   "skaitiklis": "baigti ir vykdomi projektai",
+   "vardiklis": "baigti + vykdomi + potencialūs (APVA)",
+   "slenkstis": "vardiklis < 20"
+  },
+  {
+   "id": "kultura",
+   "tipas": "Tenka 10 000 gyventojų",
+   "skaiciavimas": "kultūros vietų skaičius ÷ gyventojų skaičius × 10 000",
+   "pavadinimas": "Kultūros vietos",
+   "vienetas": "vietų 10 000 gyventojų",
+   "aprasymas": "Kiek OpenStreetMap pažymėtų bibliotekų, muziejų, teatrų, kino teatrų ir kultūros centrų tenka 10 000 gyventojų.",
+   "kryptis": "daugiau",
+   "saltinis": "OpenStreetMap; 2021 m. gyventojų ir būstų surašymas, 100 m gardelė (Valstybės duomenų agentūra)",
+   "data": "OpenStreetMap duomenų būklė 2026-10-19",
+   "faktai": "F-075",
+   "skaitiklis": "amenity=library|theatre|arts_centre|community_centre|cinema, tourism=museum",
+   "vardiklis": "gyventojai, 2021",
+   "slenkstis": "gyventojų < 1 500"
+  },
+  {
+   "id": "sportas",
+   "tipas": "Tenka 10 000 gyventojų",
+   "skaiciavimas": "sporto vietų skaičius ÷ gyventojų skaičius × 10 000",
+   "pavadinimas": "Sporto vietos",
+   "vienetas": "vietų 10 000 gyventojų",
+   "aprasymas": "Kiek OpenStreetMap pažymėtų viešai prieinamų sporto centrų, salių, stadionų ir lauko aikštynų tenka 10 000 gyventojų.",
+   "kryptis": "daugiau",
+   "saltinis": "OpenStreetMap; 2021 m. gyventojų ir būstų surašymas, 100 m gardelė (Valstybės duomenų agentūra)",
+   "data": "OpenStreetMap duomenų būklė 2026-10-19",
+   "faktai": "F-076",
+   "skaitiklis": "leisure=sports_centre|sports_hall|stadium|pitch|track|fitness_station (be access=private|customers)",
+   "vardiklis": "gyventojai, 2021",
+   "slenkstis": "gyventojų < 1 500"
+  },
+  {
+   "id": "zaidimu_aiksteles",
+   "tipas": "Tenka 1 000 vaikų",
+   "skaiciavimas": "žaidimų aikštelių skaičius ÷ 0–14 m. vaikų skaičius × 1 000",
+   "pavadinimas": "Vaikų žaidimų aikštelės",
+   "vienetas": "aikštelių 1 000 vaikų (0–14 m.)",
+   "aprasymas": "Kiek OpenStreetMap pažymėtų viešų vaikų žaidimų aikštelių tenka 1 000 vaikų (0–14 m.).",
+   "kryptis": "daugiau",
+   "saltinis": "OpenStreetMap; 2021 m. gyventojų ir būstų surašymas, 100 m gardelė (Valstybės duomenų agentūra)",
+   "data": "OpenStreetMap duomenų būklė 2026-10-19",
+   "faktai": "F-081",
+   "skaitiklis": "leisure=playground (be access=private|customers)",
+   "vardiklis": "0–14 m. gyventojai, 2021",
+   "slenkstis": "vaikų < 250"
+  },
+  {
+   "id": "vaiku_dalis",
+   "tipas": "Gyventojų dalis",
+   "skaiciavimas": "0–14 m. vaikų skaičius ÷ visų gyventojų skaičius × 100",
+   "pavadinimas": "Vaikų dalis",
+   "vienetas": "proc. gyventojų",
+   "aprasymas": "Kokią gyventojų dalį 2021 m. sudarė 0–14 metų vaikai.",
+   "kryptis": "kontekstas",
+   "saltinis": "2021 m. gyventojų ir būstų surašymas, 100 m gardelė (Valstybės duomenų agentūra)",
+   "data": "2021-01-01",
+   "faktai": "F-079",
+   "skaitiklis": "0–14 m. gyventojai",
+   "vardiklis": "visi gyventojai",
+   "slenkstis": "gyventojų < 1 500"
+  },
+  {
+   "id": "senjoru_dalis",
+   "tipas": "Gyventojų dalis",
+   "skaiciavimas": "65 m. ir vyresnių gyventojų skaičius ÷ visų gyventojų skaičius × 100",
+   "pavadinimas": "Vyresnio amžiaus gyventojų dalis",
+   "vienetas": "proc. gyventojų",
+   "aprasymas": "Kokią gyventojų dalį 2021 m. sudarė 65 metų ir vyresni žmonės.",
+   "kryptis": "kontekstas",
+   "saltinis": "2021 m. gyventojų ir būstų surašymas, 100 m gardelė (Valstybės duomenų agentūra)",
+   "data": "2021-01-01",
+   "faktai": "F-079",
+   "skaitiklis": "65+ m. gyventojai",
+   "vardiklis": "visi gyventojai",
+   "slenkstis": "gyventojų < 1 500"
+  }
+ ],
+ "reiksmes": {
+  "seniunijos": {
+   "1908": {
+    "vaikai": {
+     "reiksme": 3.2,
+     "kiekis": 12
+    },
+    "sveikata": {
+     "reiksme": 4.72,
+     "kiekis": 10
+    },
+    "socialines_paslaugos": {
+     "reiksme": 1,
+     "kiekis": 1
+    },
+    "zalieji_plotai": {
+     "reiksme": 274.1,
+     "kiekis": 580.5
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 28,
+     "kiekis": 580.5
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.31,
+     "kiekis": 71.8
+    },
+    "renovacija": {
+     "reiksme": 3.1,
+     "kiekis": 6
+    },
+    "renovacija_pradeta": {
+     "reiksme": 4.1,
+     "kiekis": 8
+    },
+    "kultura": {
+     "reiksme": 1.42,
+     "kiekis": 3
+    },
+    "sportas": {
+     "reiksme": 12.75,
+     "kiekis": 27
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.14,
+     "kiekis": 8
+    },
+    "vaiku_dalis": {
+     "reiksme": 17.7,
+     "kiekis": 3746
+    },
+    "senjoru_dalis": {
+     "reiksme": 17.4,
+     "kiekis": 3693
+    }
+   },
+   "9506": {
+    "vaikai": {
+     "reiksme": 8.55,
+     "kiekis": 46
+    },
+    "sveikata": {
+     "reiksme": 26.62,
+     "kiekis": 97
+    },
+    "socialines_paslaugos": {
+     "reiksme": 2,
+     "kiekis": 2
+    },
+    "zalieji_plotai": {
+     "reiksme": 67.9,
+     "kiekis": 247.5
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 21.6,
+     "kiekis": 247.5
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.63,
+     "kiekis": 133
+    },
+    "renovacija": {
+     "reiksme": 4,
+     "kiekis": 61
+    },
+    "renovacija_pradeta": {
+     "reiksme": 6.9,
+     "kiekis": 106
+    },
+    "kultura": {
+     "reiksme": 16.47,
+     "kiekis": 60
+    },
+    "sportas": {
+     "reiksme": 24.98,
+     "kiekis": 91
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.23,
+     "kiekis": 12
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.8,
+     "kiekis": 5381
+    },
+    "senjoru_dalis": {
+     "reiksme": 22.1,
+     "kiekis": 8037
+    }
+   },
+   "1904": {
+    "vaikai": {
+     "reiksme": 2.87,
+     "kiekis": 21
+    },
+    "sveikata": {
+     "reiksme": 5.41,
+     "kiekis": 28
+    },
+    "socialines_paslaugos": {
+     "reiksme": 3,
+     "kiekis": 3
+    },
+    "zalieji_plotai": {
+     "reiksme": 37,
+     "kiekis": 191.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 36.8,
+     "kiekis": 191.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.24,
+     "kiekis": 115.8
+    },
+    "renovacija": {
+     "reiksme": 9,
+     "kiekis": 34
+    },
+    "renovacija_pradeta": {
+     "reiksme": 11.9,
+     "kiekis": 45
+    },
+    "kultura": {
+     "reiksme": 0.39,
+     "kiekis": 2
+    },
+    "sportas": {
+     "reiksme": 14.29,
+     "kiekis": 74
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 5.61,
+     "kiekis": 41
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.1,
+     "kiekis": 7310
+    },
+    "senjoru_dalis": {
+     "reiksme": 23.6,
+     "kiekis": 12208
+    }
+   },
+   "1909": {
+    "vaikai": {
+     "reiksme": 3.61,
+     "kiekis": 21
+    },
+    "sveikata": {
+     "reiksme": 6.49,
+     "kiekis": 25
+    },
+    "socialines_paslaugos": {
+     "reiksme": 1,
+     "kiekis": 1
+    },
+    "zalieji_plotai": {
+     "reiksme": 228.3,
+     "kiekis": 879.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 66.4,
+     "kiekis": 879.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.21,
+     "kiekis": 126.3
+    },
+    "renovacija": {
+     "reiksme": 17.1,
+     "kiekis": 55
+    },
+    "renovacija_pradeta": {
+     "reiksme": 20.8,
+     "kiekis": 67
+    },
+    "kultura": {
+     "reiksme": 0.52,
+     "kiekis": 2
+    },
+    "sportas": {
+     "reiksme": 19.98,
+     "kiekis": 77
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.92,
+     "kiekis": 17
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.1,
+     "kiekis": 5814
+    },
+    "senjoru_dalis": {
+     "reiksme": 26.6,
+     "kiekis": 10247
+    }
+   },
+   "9507": {
+    "vaikai": {
+     "reiksme": 3.93,
+     "kiekis": 21
+    },
+    "sveikata": {
+     "reiksme": 5.75,
+     "kiekis": 20
+    },
+    "socialines_paslaugos": {
+     "reiksme": 3,
+     "kiekis": 3
+    },
+    "zalieji_plotai": {
+     "reiksme": 310.6,
+     "kiekis": 1079.9
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 33.5,
+     "kiekis": 1079.9
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.36,
+     "kiekis": 104.3
+    },
+    "renovacija": {
+     "reiksme": 4.1,
+     "kiekis": 32
+    },
+    "renovacija_pradeta": {
+     "reiksme": 8.4,
+     "kiekis": 65
+    },
+    "kultura": {
+     "reiksme": 0.29,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 13.23,
+     "kiekis": 46
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.62,
+     "kiekis": 14
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.4,
+     "kiekis": 5338
+    },
+    "senjoru_dalis": {
+     "reiksme": 19.9,
+     "kiekis": 6916
+    }
+   },
+   "9508": {
+    "vaikai": {
+     "reiksme": 5.49,
+     "kiekis": 30
+    },
+    "sveikata": {
+     "reiksme": 5.91,
+     "kiekis": 23
+    },
+    "socialines_paslaugos": {
+     "reiksme": 3,
+     "kiekis": 3
+    },
+    "zalieji_plotai": {
+     "reiksme": 244.4,
+     "kiekis": 950.9
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 29.5,
+     "kiekis": 950.9
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.41,
+     "kiekis": 148.7
+    },
+    "renovacija": {
+     "reiksme": 23.9,
+     "kiekis": 95
+    },
+    "renovacija_pradeta": {
+     "reiksme": 30.7,
+     "kiekis": 122
+    },
+    "kultura": {
+     "reiksme": 1.29,
+     "kiekis": 5
+    },
+    "sportas": {
+     "reiksme": 20.05,
+     "kiekis": 78
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 4.57,
+     "kiekis": 25
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.1,
+     "kiekis": 5467
+    },
+    "senjoru_dalis": {
+     "reiksme": 22.1,
+     "kiekis": 8601
+    }
+   },
+   "1910": {
+    "vaikai": {
+     "reiksme": 2.78,
+     "kiekis": 10
+    },
+    "sveikata": {
+     "reiksme": 6.35,
+     "kiekis": 16
+    },
+    "socialines_paslaugos": {
+     "reiksme": 1,
+     "kiekis": 1
+    },
+    "zalieji_plotai": {
+     "reiksme": 141.4,
+     "kiekis": 356.1
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 24.9,
+     "kiekis": 356.1
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.52,
+     "kiekis": 77.2
+    },
+    "renovacija": {
+     "reiksme": 8.6,
+     "kiekis": 31
+    },
+    "renovacija_pradeta": {
+     "reiksme": 12.8,
+     "kiekis": 46
+    },
+    "kultura": {
+     "reiksme": 1.59,
+     "kiekis": 4
+    },
+    "sportas": {
+     "reiksme": 16.68,
+     "kiekis": 42
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 1.67,
+     "kiekis": 6
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.3,
+     "kiekis": 3600
+    },
+    "senjoru_dalis": {
+     "reiksme": 21.1,
+     "kiekis": 5323
+    }
+   },
+   "1911": {
+    "vaikai": {
+     "reiksme": 2.74,
+     "kiekis": 28
+    },
+    "sveikata": {
+     "reiksme": 7.06,
+     "kiekis": 39
+    },
+    "socialines_paslaugos": {
+     "reiksme": 1,
+     "kiekis": 1
+    },
+    "zalieji_plotai": {
+     "reiksme": 135.9,
+     "kiekis": 750.7
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 32.1,
+     "kiekis": 750.7
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.49,
+     "kiekis": 126.8
+    },
+    "renovacija": {
+     "reiksme": 6.3,
+     "kiekis": 20
+    },
+    "renovacija_pradeta": {
+     "reiksme": 8.2,
+     "kiekis": 26
+    },
+    "kultura": {
+     "reiksme": 0.72,
+     "kiekis": 4
+    },
+    "sportas": {
+     "reiksme": 10.68,
+     "kiekis": 59
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.84,
+     "kiekis": 29
+    },
+    "vaiku_dalis": {
+     "reiksme": 18.5,
+     "kiekis": 10201
+    },
+    "senjoru_dalis": {
+     "reiksme": 16.0,
+     "kiekis": 8832
+    }
+   },
+   "9505": {
+    "vaikai": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": null,
+     "kiekis": 127.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 32.1,
+     "kiekis": 127.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.75,
+     "kiekis": 20.2
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": null,
+     "kiekis": 18
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": null,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": null,
+     "kiekis": 180
+    },
+    "senjoru_dalis": {
+     "reiksme": null,
+     "kiekis": 244
+    }
+   }
+  },
+  "apylinkes": {
+   "716958": {
+    "vaikai": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": null,
+     "kiekis": 4.4
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 13.7,
+     "kiekis": 4.4
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.61,
+     "kiekis": 3.1
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": null,
+     "kiekis": 190
+    },
+    "senjoru_dalis": {
+     "reiksme": null,
+     "kiekis": 333
+    }
+   },
+   "716704": {
+    "vaikai": {
+     "reiksme": 7.5,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 3.27,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 32.6,
+     "kiekis": 10
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 19.4,
+     "kiekis": 10
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.79,
+     "kiekis": 5.6
+    },
+    "renovacija": {
+     "reiksme": 8.8,
+     "kiekis": 3
+    },
+    "renovacija_pradeta": {
+     "reiksme": 8.8,
+     "kiekis": 3
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 13.08,
+     "kiekis": 4
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 5,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.1,
+     "kiekis": 400
+    },
+    "senjoru_dalis": {
+     "reiksme": 24.3,
+     "kiekis": 744
+    }
+   },
+   "716960": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 14.5,
+     "kiekis": 6
+    },
+    "socialines_paslaugos": {
+     "reiksme": 1,
+     "kiekis": 1
+    },
+    "zalieji_plotai": {
+     "reiksme": 50.2,
+     "kiekis": 20.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 33.5,
+     "kiekis": 20.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.67,
+     "kiekis": 6.4
+    },
+    "renovacija": {
+     "reiksme": 26.7,
+     "kiekis": 12
+    },
+    "renovacija_pradeta": {
+     "reiksme": 40,
+     "kiekis": 18
+    },
+    "kultura": {
+     "reiksme": 2.42,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 12.08,
+     "kiekis": 5
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 1.73,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.0,
+     "kiekis": 578
+    },
+    "senjoru_dalis": {
+     "reiksme": 22.9,
+     "kiekis": 946
+    }
+   },
+   "716962": {
+    "vaikai": {
+     "reiksme": 4.3,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 54.6,
+     "kiekis": 19.3
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 23.7,
+     "kiekis": 19.3
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.7,
+     "kiekis": 8.6
+    },
+    "renovacija": {
+     "reiksme": 7.1,
+     "kiekis": 5
+    },
+    "renovacija_pradeta": {
+     "reiksme": 17.1,
+     "kiekis": 12
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 5.66,
+     "kiekis": 2
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.15,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.2,
+     "kiekis": 465
+    },
+    "senjoru_dalis": {
+     "reiksme": 22.9,
+     "kiekis": 809
+    }
+   },
+   "716964": {
+    "vaikai": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 17.37,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 102.2,
+     "kiekis": 17.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 15.8,
+     "kiekis": 17.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.35,
+     "kiekis": 6
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 23.16,
+     "kiekis": 4
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 12.6,
+     "kiekis": 218
+    },
+    "senjoru_dalis": {
+     "reiksme": 20.7,
+     "kiekis": 357
+    }
+   },
+   "716966": {
+    "vaikai": {
+     "reiksme": 2.27,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 7.33,
+     "kiekis": 4
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 115.8,
+     "kiekis": 63.2
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 22,
+     "kiekis": 63.2
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.39,
+     "kiekis": 16.9
+    },
+    "renovacija": {
+     "reiksme": 15.6,
+     "kiekis": 5
+    },
+    "renovacija_pradeta": {
+     "reiksme": 21.9,
+     "kiekis": 7
+    },
+    "kultura": {
+     "reiksme": 3.67,
+     "kiekis": 2
+    },
+    "sportas": {
+     "reiksme": 27.49,
+     "kiekis": 15
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 16.1,
+     "kiekis": 880
+    },
+    "senjoru_dalis": {
+     "reiksme": 17.7,
+     "kiekis": 967
+    }
+   },
+   "713766": {
+    "vaikai": {
+     "reiksme": 4.48,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 6.59,
+     "kiekis": 2
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 693.9,
+     "kiekis": 210.7
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 30,
+     "kiekis": 210.7
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.67,
+     "kiekis": 26.1
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 3.29,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 36.23,
+     "kiekis": 11
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.24,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.7,
+     "kiekis": 446
+    },
+    "senjoru_dalis": {
+     "reiksme": 20.5,
+     "kiekis": 621
+    }
+   },
+   "713252": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 8.62,
+     "kiekis": 4
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 144.7,
+     "kiekis": 67.1
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 26.4,
+     "kiekis": 67.1
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.2,
+     "kiekis": 6.2
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 2
+    },
+    "kultura": {
+     "reiksme": 2.15,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 8.62,
+     "kiekis": 4
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0.88,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 24.5,
+     "kiekis": 1138
+    },
+    "senjoru_dalis": {
+     "reiksme": 8.2,
+     "kiekis": 382
+    }
+   },
+   "716968": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 17.4,
+     "kiekis": 5
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 396.8,
+     "kiekis": 114
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 51.1,
+     "kiekis": 114
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.58,
+     "kiekis": 10.6
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 1.88,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 18.5,
+     "kiekis": 533
+    },
+    "senjoru_dalis": {
+     "reiksme": 11.3,
+     "kiekis": 324
+    }
+   },
+   "713098": {
+    "vaikai": {
+     "reiksme": 1.17,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 357.2,
+     "kiekis": 102.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 24,
+     "kiekis": 102.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.21,
+     "kiekis": 9.5
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 3.48,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.34,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 29.7,
+     "kiekis": 853
+    },
+    "senjoru_dalis": {
+     "reiksme": 3.4,
+     "kiekis": 99
+    }
+   },
+   "713768": {
+    "vaikai": {
+     "reiksme": 6.88,
+     "kiekis": 5
+    },
+    "sveikata": {
+     "reiksme": 6.09,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 555.5,
+     "kiekis": 273.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 40.4,
+     "kiekis": 273.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.37,
+     "kiekis": 20.6
+    },
+    "renovacija": {
+     "reiksme": 2.4,
+     "kiekis": 3
+    },
+    "renovacija_pradeta": {
+     "reiksme": 3.2,
+     "kiekis": 4
+    },
+    "kultura": {
+     "reiksme": 2.03,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 26.4,
+     "kiekis": 13
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 5.5,
+     "kiekis": 4
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.8,
+     "kiekis": 727
+    },
+    "senjoru_dalis": {
+     "reiksme": 20.9,
+     "kiekis": 1027
+    }
+   },
+   "716974": {
+    "vaikai": {
+     "reiksme": 2.98,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 10.71,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 513.2,
+     "kiekis": 143.7
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 38.2,
+     "kiekis": 143.7
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.21,
+     "kiekis": 6.1
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 2
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 2
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 3.57,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 24.0,
+     "kiekis": 671
+    },
+    "senjoru_dalis": {
+     "reiksme": 11.5,
+     "kiekis": 323
+    }
+   },
+   "714752": {
+    "vaikai": {
+     "reiksme": 19.84,
+     "kiekis": 10
+    },
+    "sveikata": {
+     "reiksme": 22.58,
+     "kiekis": 7
+    },
+    "socialines_paslaugos": {
+     "reiksme": 1,
+     "kiekis": 1
+    },
+    "zalieji_plotai": {
+     "reiksme": 84.8,
+     "kiekis": 26.3
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 26.4,
+     "kiekis": 26.3
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.75,
+     "kiekis": 17
+    },
+    "renovacija": {
+     "reiksme": 0.5,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": 2.2,
+     "kiekis": 4
+    },
+    "kultura": {
+     "reiksme": 32.26,
+     "kiekis": 10
+    },
+    "sportas": {
+     "reiksme": 48.39,
+     "kiekis": 15
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 3.97,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 16.3,
+     "kiekis": 504
+    },
+    "senjoru_dalis": {
+     "reiksme": 17.9,
+     "kiekis": 554
+    }
+   },
+   "717180": {
+    "vaikai": {
+     "reiksme": 11.9,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 32.45,
+     "kiekis": 5
+    },
+    "socialines_paslaugos": {
+     "reiksme": 1,
+     "kiekis": 1
+    },
+    "zalieji_plotai": {
+     "reiksme": 43.5,
+     "kiekis": 6.7
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 15,
+     "kiekis": 6.7
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.68,
+     "kiekis": 5.3
+    },
+    "renovacija": {
+     "reiksme": 2.3,
+     "kiekis": 3
+    },
+    "renovacija_pradeta": {
+     "reiksme": 6.9,
+     "kiekis": 9
+    },
+    "kultura": {
+     "reiksme": 51.91,
+     "kiekis": 8
+    },
+    "sportas": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 16.4,
+     "kiekis": 252
+    },
+    "senjoru_dalis": {
+     "reiksme": 19.1,
+     "kiekis": 295
+    }
+   },
+   "716976": {
+    "vaikai": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": null,
+     "kiekis": 3.5
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 12.6,
+     "kiekis": 3.5
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.1,
+     "kiekis": 0.6
+    },
+    "renovacija": {
+     "reiksme": 2.4,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": 2.4,
+     "kiekis": 1
+    },
+    "kultura": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": null,
+     "kiekis": 145
+    },
+    "senjoru_dalis": {
+     "reiksme": null,
+     "kiekis": 212
+    }
+   },
+   "716978": {
+    "vaikai": {
+     "reiksme": 3.57,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 4.08,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 62,
+     "kiekis": 15.2
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 33,
+     "kiekis": 15.2
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.06,
+     "kiekis": 10.4
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 3.2,
+     "kiekis": 1
+    },
+    "kultura": {
+     "reiksme": 4.08,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 53.06,
+     "kiekis": 13
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 3.57,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 11.4,
+     "kiekis": 280
+    },
+    "senjoru_dalis": {
+     "reiksme": 29.6,
+     "kiekis": 726
+    }
+   },
+   "716980": {
+    "vaikai": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 22.95,
+     "kiekis": 4
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 3.4,
+     "kiekis": 0.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 1.5,
+     "kiekis": 0.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.3,
+     "kiekis": 3.1
+    },
+    "renovacija": {
+     "reiksme": 2.4,
+     "kiekis": 3
+    },
+    "renovacija_pradeta": {
+     "reiksme": 6.5,
+     "kiekis": 8
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 5.74,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.3,
+     "kiekis": 232
+    },
+    "senjoru_dalis": {
+     "reiksme": 25.7,
+     "kiekis": 448
+    }
+   },
+   "716982": {
+    "vaikai": {
+     "reiksme": 9.64,
+     "kiekis": 4
+    },
+    "sveikata": {
+     "reiksme": 10.57,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 70.8,
+     "kiekis": 20.1
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 28.3,
+     "kiekis": 20.1
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.25,
+     "kiekis": 14.1
+    },
+    "renovacija": {
+     "reiksme": 3.7,
+     "kiekis": 5
+    },
+    "renovacija_pradeta": {
+     "reiksme": 7.4,
+     "kiekis": 10
+    },
+    "kultura": {
+     "reiksme": 49.31,
+     "kiekis": 14
+    },
+    "sportas": {
+     "reiksme": 17.61,
+     "kiekis": 5
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.41,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.6,
+     "kiekis": 415
+    },
+    "senjoru_dalis": {
+     "reiksme": 22.3,
+     "kiekis": 634
+    }
+   },
+   "716984": {
+    "vaikai": {
+     "reiksme": 9.49,
+     "kiekis": 6
+    },
+    "sveikata": {
+     "reiksme": 9.08,
+     "kiekis": 4
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 70.4,
+     "kiekis": 31
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 28.8,
+     "kiekis": 31
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.87,
+     "kiekis": 18.2
+    },
+    "renovacija": {
+     "reiksme": 3.3,
+     "kiekis": 7
+    },
+    "renovacija_pradeta": {
+     "reiksme": 4.8,
+     "kiekis": 10
+    },
+    "kultura": {
+     "reiksme": 27.25,
+     "kiekis": 12
+    },
+    "sportas": {
+     "reiksme": 34.07,
+     "kiekis": 15
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 3.16,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.4,
+     "kiekis": 632
+    },
+    "senjoru_dalis": {
+     "reiksme": 20.8,
+     "kiekis": 914
+    }
+   },
+   "716986": {
+    "vaikai": {
+     "reiksme": 10.33,
+     "kiekis": 6
+    },
+    "sveikata": {
+     "reiksme": 28.63,
+     "kiekis": 11
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 62.1,
+     "kiekis": 23.9
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 17.8,
+     "kiekis": 23.9
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.81,
+     "kiekis": 21.6
+    },
+    "renovacija": {
+     "reiksme": 6.7,
+     "kiekis": 14
+    },
+    "renovacija_pradeta": {
+     "reiksme": 8.7,
+     "kiekis": 18
+    },
+    "kultura": {
+     "reiksme": 20.82,
+     "kiekis": 8
+    },
+    "sportas": {
+     "reiksme": 28.63,
+     "kiekis": 11
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.1,
+     "kiekis": 581
+    },
+    "senjoru_dalis": {
+     "reiksme": 22.9,
+     "kiekis": 880
+    }
+   },
+   "716992": {
+    "vaikai": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": null,
+     "kiekis": 14.9
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 20.5,
+     "kiekis": 14.9
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.5,
+     "kiekis": 5.4
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 3,
+     "kiekis": 1
+    },
+    "kultura": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": null,
+     "kiekis": 108
+    },
+    "senjoru_dalis": {
+     "reiksme": null,
+     "kiekis": 155
+    }
+   },
+   "715400": {
+    "vaikai": {
+     "reiksme": 4.71,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 12.51,
+     "kiekis": 4
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 32.1,
+     "kiekis": 10.3
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 11.1,
+     "kiekis": 10.3
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.26,
+     "kiekis": 4.5
+    },
+    "renovacija": {
+     "reiksme": 4.3,
+     "kiekis": 7
+    },
+    "renovacija_pradeta": {
+     "reiksme": 7.5,
+     "kiekis": 12
+    },
+    "kultura": {
+     "reiksme": 3.13,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 3.13,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.35,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.3,
+     "kiekis": 425
+    },
+    "senjoru_dalis": {
+     "reiksme": 24.5,
+     "kiekis": 782
+    }
+   },
+   "717034": {
+    "vaikai": {
+     "reiksme": 6.91,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 112.47,
+     "kiekis": 34
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 117.6,
+     "kiekis": 35.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 26.4,
+     "kiekis": 35.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.42,
+     "kiekis": 9.6
+    },
+    "renovacija": {
+     "reiksme": 6.5,
+     "kiekis": 3
+    },
+    "renovacija_pradeta": {
+     "reiksme": 6.5,
+     "kiekis": 3
+    },
+    "kultura": {
+     "reiksme": 9.92,
+     "kiekis": 3
+    },
+    "sportas": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.4,
+     "kiekis": 434
+    },
+    "senjoru_dalis": {
+     "reiksme": 23.8,
+     "kiekis": 718
+    }
+   },
+   "717040": {
+    "vaikai": {
+     "reiksme": 5.2,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 11.79,
+     "kiekis": 5
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 19.2,
+     "kiekis": 8.1
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 14.9,
+     "kiekis": 8.1
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.59,
+     "kiekis": 7.3
+    },
+    "renovacija": {
+     "reiksme": 15,
+     "kiekis": 9
+    },
+    "renovacija_pradeta": {
+     "reiksme": 20,
+     "kiekis": 12
+    },
+    "kultura": {
+     "reiksme": 2.36,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 9.43,
+     "kiekis": 4
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 3.47,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.6,
+     "kiekis": 577
+    },
+    "senjoru_dalis": {
+     "reiksme": 24.0,
+     "kiekis": 1019
+    }
+   },
+   "717042": {
+    "vaikai": {
+     "reiksme": 4.09,
+     "kiekis": 4
+    },
+    "sveikata": {
+     "reiksme": 10.77,
+     "kiekis": 7
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 137.8,
+     "kiekis": 89.5
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 38.6,
+     "kiekis": 89.5
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.86,
+     "kiekis": 30.1
+    },
+    "renovacija": {
+     "reiksme": 5,
+     "kiekis": 10
+    },
+    "renovacija_pradeta": {
+     "reiksme": 9.4,
+     "kiekis": 19
+    },
+    "kultura": {
+     "reiksme": 4.62,
+     "kiekis": 3
+    },
+    "sportas": {
+     "reiksme": 69.26,
+     "kiekis": 45
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 3.07,
+     "kiekis": 3
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.0,
+     "kiekis": 977
+    },
+    "senjoru_dalis": {
+     "reiksme": 23.2,
+     "kiekis": 1505
+    }
+   },
+   "717002": {
+    "vaikai": {
+     "reiksme": 3.34,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 63.8,
+     "kiekis": 26.4
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 32,
+     "kiekis": 26.4
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.37,
+     "kiekis": 4.9
+    },
+    "renovacija": {
+     "reiksme": 6.1,
+     "kiekis": 2
+    },
+    "renovacija_pradeta": {
+     "reiksme": 12.1,
+     "kiekis": 4
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 7.27,
+     "kiekis": 3
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 3.34,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.5,
+     "kiekis": 598
+    },
+    "senjoru_dalis": {
+     "reiksme": 22.5,
+     "kiekis": 927
+    }
+   },
+   "714754": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 8.38,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 66.7,
+     "kiekis": 23.9
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 26.5,
+     "kiekis": 23.9
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.27,
+     "kiekis": 4.8
+    },
+    "renovacija": {
+     "reiksme": 9.1,
+     "kiekis": 4
+    },
+    "renovacija_pradeta": {
+     "reiksme": 15.9,
+     "kiekis": 7
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 2.79,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.5,
+     "kiekis": 519
+    },
+    "senjoru_dalis": {
+     "reiksme": 21.8,
+     "kiekis": 779
+    }
+   },
+   "714328": {
+    "vaikai": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": null,
+     "kiekis": 12.5
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 4.2,
+     "kiekis": 12.5
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.01,
+     "kiekis": 0.3
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": null,
+     "kiekis": 189
+    },
+    "senjoru_dalis": {
+     "reiksme": null,
+     "kiekis": 209
+    }
+   },
+   "717036": {
+    "vaikai": {
+     "reiksme": 7.69,
+     "kiekis": 4
+    },
+    "sveikata": {
+     "reiksme": 29.54,
+     "kiekis": 11
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 17.8,
+     "kiekis": 6.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 7.8,
+     "kiekis": 6.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.23,
+     "kiekis": 4
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 4.5,
+     "kiekis": 1
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 18.8,
+     "kiekis": 7
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 1.92,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.0,
+     "kiekis": 520
+    },
+    "senjoru_dalis": {
+     "reiksme": 17.8,
+     "kiekis": 662
+    }
+   },
+   "717038": {
+    "vaikai": {
+     "reiksme": 3.37,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 9.3,
+     "kiekis": 5
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 44.3,
+     "kiekis": 23.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 35.6,
+     "kiekis": 23.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.82,
+     "kiekis": 9.3
+    },
+    "renovacija": {
+     "reiksme": 5.9,
+     "kiekis": 3
+    },
+    "renovacija_pradeta": {
+     "reiksme": 9.8,
+     "kiekis": 5
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 22.31,
+     "kiekis": 12
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 16.5,
+     "kiekis": 889
+    },
+    "senjoru_dalis": {
+     "reiksme": 25.6,
+     "kiekis": 1377
+    }
+   },
+   "714826": {
+    "vaikai": {
+     "reiksme": 7.21,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 38.7,
+     "kiekis": 10.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 20.6,
+     "kiekis": 10.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.81,
+     "kiekis": 10.2
+    },
+    "renovacija": {
+     "reiksme": 13.3,
+     "kiekis": 4
+    },
+    "renovacija_pradeta": {
+     "reiksme": 16.7,
+     "kiekis": 5
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 21.52,
+     "kiekis": 6
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 26.44,
+     "kiekis": 11
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.9,
+     "kiekis": 416
+    },
+    "senjoru_dalis": {
+     "reiksme": 21.0,
+     "kiekis": 586
+    }
+   },
+   "714646": {
+    "vaikai": {
+     "reiksme": 4.1,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 6.17,
+     "kiekis": 2
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 1651.9,
+     "kiekis": 535.9
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 74.4,
+     "kiekis": 535.9
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.72,
+     "kiekis": 47.8
+    },
+    "renovacija": {
+     "reiksme": 3.2,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": 3.2,
+     "kiekis": 1
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 55.49,
+     "kiekis": 18
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.05,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.0,
+     "kiekis": 488
+    },
+    "senjoru_dalis": {
+     "reiksme": 23.7,
+     "kiekis": 770
+    }
+   },
+   "717044": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 13,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 27.1,
+     "kiekis": 6.3
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 52,
+     "kiekis": 6.3
+    },
+    "pesciuju_takai": {
+     "reiksme": null,
+     "kiekis": 3.7
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 16.0,
+     "kiekis": 369
+    },
+    "senjoru_dalis": {
+     "reiksme": 24.0,
+     "kiekis": 555
+    }
+   },
+   "714330": {
+    "vaikai": {
+     "reiksme": 6.41,
+     "kiekis": 4
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 23.4,
+     "kiekis": 9.4
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 40.1,
+     "kiekis": 9.4
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.7,
+     "kiekis": 5.5
+    },
+    "renovacija": {
+     "reiksme": 24.1,
+     "kiekis": 7
+    },
+    "renovacija_pradeta": {
+     "reiksme": 27.6,
+     "kiekis": 8
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 22.4,
+     "kiekis": 9
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 1.6,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.5,
+     "kiekis": 624
+    },
+    "senjoru_dalis": {
+     "reiksme": 23.9,
+     "kiekis": 960
+    }
+   },
+   "717046": {
+    "vaikai": {
+     "reiksme": 1.74,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 7.6,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 30.3,
+     "kiekis": 12
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 48.7,
+     "kiekis": 12
+    },
+    "pesciuju_takai": {
+     "reiksme": 2.22,
+     "kiekis": 7.5
+    },
+    "renovacija": {
+     "reiksme": 22.6,
+     "kiekis": 7
+    },
+    "renovacija_pradeta": {
+     "reiksme": 22.6,
+     "kiekis": 7
+    },
+    "kultura": {
+     "reiksme": 2.53,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 15.19,
+     "kiekis": 6
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 6.97,
+     "kiekis": 4
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.5,
+     "kiekis": 574
+    },
+    "senjoru_dalis": {
+     "reiksme": 26.8,
+     "kiekis": 1059
+    }
+   },
+   "714240": {
+    "vaikai": {
+     "reiksme": 3.69,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 1.82,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 1,
+     "kiekis": 1
+    },
+    "zalieji_plotai": {
+     "reiksme": 61.5,
+     "kiekis": 33.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 51.3,
+     "kiekis": 33.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.63,
+     "kiekis": 14
+    },
+    "renovacija": {
+     "reiksme": 18.9,
+     "kiekis": 7
+    },
+    "renovacija_pradeta": {
+     "reiksme": 21.6,
+     "kiekis": 8
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 3.64,
+     "kiekis": 2
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 8.62,
+     "kiekis": 7
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.8,
+     "kiekis": 812
+    },
+    "senjoru_dalis": {
+     "reiksme": 28.2,
+     "kiekis": 1552
+    }
+   },
+   "714242": {
+    "vaikai": {
+     "reiksme": 2.62,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 28.36,
+     "kiekis": 8
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 39,
+     "kiekis": 11
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 31.4,
+     "kiekis": 11
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.86,
+     "kiekis": 7.1
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 4
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 4
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 21.27,
+     "kiekis": 6
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 5.25,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.5,
+     "kiekis": 381
+    },
+    "senjoru_dalis": {
+     "reiksme": 29.3,
+     "kiekis": 826
+    }
+   },
+   "716314": {
+    "vaikai": {
+     "reiksme": 5.54,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 8.13,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 44.3,
+     "kiekis": 16.3
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 52,
+     "kiekis": 16.3
+    },
+    "pesciuju_takai": {
+     "reiksme": 2,
+     "kiekis": 10.1
+    },
+    "renovacija": {
+     "reiksme": 8.3,
+     "kiekis": 3
+    },
+    "renovacija_pradeta": {
+     "reiksme": 13.9,
+     "kiekis": 5
+    },
+    "kultura": {
+     "reiksme": 2.71,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 16.25,
+     "kiekis": 6
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 3.69,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.7,
+     "kiekis": 542
+    },
+    "senjoru_dalis": {
+     "reiksme": 28.4,
+     "kiekis": 1049
+    }
+   },
+   "716316": {
+    "vaikai": {
+     "reiksme": 6.56,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 6.68,
+     "kiekis": 2
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 765.2,
+     "kiekis": 229.2
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 66.3,
+     "kiekis": 229.2
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.49,
+     "kiekis": 18.3
+    },
+    "renovacija": {
+     "reiksme": 14.3,
+     "kiekis": 6
+    },
+    "renovacija_pradeta": {
+     "reiksme": 19,
+     "kiekis": 8
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 33.38,
+     "kiekis": 10
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.3,
+     "kiekis": 457
+    },
+    "senjoru_dalis": {
+     "reiksme": 24.5,
+     "kiekis": 735
+    }
+   },
+   "714244": {
+    "vaikai": {
+     "reiksme": 1.33,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 3.92,
+     "kiekis": 2
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 18.2,
+     "kiekis": 9.3
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 34.7,
+     "kiekis": 9.3
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.91,
+     "kiekis": 4.5
+    },
+    "renovacija": {
+     "reiksme": 42.1,
+     "kiekis": 16
+    },
+    "renovacija_pradeta": {
+     "reiksme": 52.6,
+     "kiekis": 20
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 15.67,
+     "kiekis": 8
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.7,
+     "kiekis": 751
+    },
+    "senjoru_dalis": {
+     "reiksme": 29.6,
+     "kiekis": 1512
+    }
+   },
+   "716970": {
+    "vaikai": {
+     "reiksme": 3.92,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 23.81,
+     "kiekis": 4
+    },
+    "socialines_paslaugos": {
+     "reiksme": 1,
+     "kiekis": 1
+    },
+    "zalieji_plotai": {
+     "reiksme": 389.9,
+     "kiekis": 65.5
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 25,
+     "kiekis": 65.5
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.18,
+     "kiekis": 6.9
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 2
+    },
+    "kultura": {
+     "reiksme": 5.95,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 11.9,
+     "kiekis": 2
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.2,
+     "kiekis": 255
+    },
+    "senjoru_dalis": {
+     "reiksme": 20.0,
+     "kiekis": 336
+    }
+   },
+   "717010": {
+    "vaikai": {
+     "reiksme": 0.91,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 191.9,
+     "kiekis": 103.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 26,
+     "kiekis": 103.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.39,
+     "kiekis": 19
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 12.94,
+     "kiekis": 7
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0.91,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 20.4,
+     "kiekis": 1103
+    },
+    "senjoru_dalis": {
+     "reiksme": 14.2,
+     "kiekis": 767
+    }
+   },
+   "714326": {
+    "vaikai": {
+     "reiksme": 6.41,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 115.2,
+     "kiekis": 22.5
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 19.7,
+     "kiekis": 22.5
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.22,
+     "kiekis": 4.2
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 35.77,
+     "kiekis": 7
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 6.41,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.9,
+     "kiekis": 312
+    },
+    "senjoru_dalis": {
+     "reiksme": 20.6,
+     "kiekis": 404
+    }
+   },
+   "714230": {
+    "vaikai": {
+     "reiksme": 1.82,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 3.14,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 451,
+     "kiekis": 143.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 43.7,
+     "kiekis": 143.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.9,
+     "kiekis": 32.5
+    },
+    "renovacija": {
+     "reiksme": 5,
+     "kiekis": 2
+    },
+    "renovacija_pradeta": {
+     "reiksme": 5,
+     "kiekis": 2
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 6.27,
+     "kiekis": 2
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 3.64,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 17.2,
+     "kiekis": 550
+    },
+    "senjoru_dalis": {
+     "reiksme": 18.2,
+     "kiekis": 580
+    }
+   },
+   "714248": {
+    "vaikai": {
+     "reiksme": 1.88,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 5.21,
+     "kiekis": 2
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 20.1,
+     "kiekis": 7.7
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 5.3,
+     "kiekis": 7.7
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.26,
+     "kiekis": 7.3
+    },
+    "renovacija": {
+     "reiksme": 2.8,
+     "kiekis": 5
+    },
+    "renovacija_pradeta": {
+     "reiksme": 11.4,
+     "kiekis": 20
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 7.81,
+     "kiekis": 3
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.8,
+     "kiekis": 532
+    },
+    "senjoru_dalis": {
+     "reiksme": 20.1,
+     "kiekis": 773
+    }
+   },
+   "714834": {
+    "vaikai": {
+     "reiksme": 5.88,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 2.97,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 45,
+     "kiekis": 15.2
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 11.6,
+     "kiekis": 15.2
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.32,
+     "kiekis": 7.3
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 20.8,
+     "kiekis": 7
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 5.88,
+     "kiekis": 3
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.2,
+     "kiekis": 510
+    },
+    "senjoru_dalis": {
+     "reiksme": 17.7,
+     "kiekis": 594
+    }
+   },
+   "716998": {
+    "vaikai": {
+     "reiksme": 7.97,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 19.32,
+     "kiekis": 4
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 167.8,
+     "kiekis": 34.7
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 21,
+     "kiekis": 34.7
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.15,
+     "kiekis": 3.9
+    },
+    "renovacija": {
+     "reiksme": 5.3,
+     "kiekis": 7
+    },
+    "renovacija_pradeta": {
+     "reiksme": 6.1,
+     "kiekis": 8
+    },
+    "kultura": {
+     "reiksme": 4.83,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 9.66,
+     "kiekis": 2
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 12.1,
+     "kiekis": 251
+    },
+    "senjoru_dalis": {
+     "reiksme": 22.1,
+     "kiekis": 458
+    }
+   },
+   "717000": {
+    "vaikai": {
+     "reiksme": 5.22,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 8.26,
+     "kiekis": 2
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 109.5,
+     "kiekis": 26.5
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 20.8,
+     "kiekis": 26.5
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.27,
+     "kiekis": 5.1
+    },
+    "renovacija": {
+     "reiksme": 1.1,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": 1.1,
+     "kiekis": 1
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 12.39,
+     "kiekis": 3
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 5.22,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.8,
+     "kiekis": 383
+    },
+    "senjoru_dalis": {
+     "reiksme": 16.5,
+     "kiekis": 400
+    }
+   },
+   "714836": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 3.13,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 287.4,
+     "kiekis": 91.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 44.3,
+     "kiekis": 91.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.6,
+     "kiekis": 9.8
+    },
+    "renovacija": {
+     "reiksme": 4.9,
+     "kiekis": 3
+    },
+    "renovacija_pradeta": {
+     "reiksme": 14.8,
+     "kiekis": 9
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 3.13,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.4,
+     "kiekis": 460
+    },
+    "senjoru_dalis": {
+     "reiksme": 21.6,
+     "kiekis": 689
+    }
+   },
+   "714678": {
+    "vaikai": {
+     "reiksme": 13.48,
+     "kiekis": 6
+    },
+    "sveikata": {
+     "reiksme": 3.3,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 2,
+     "kiekis": 2
+    },
+    "zalieji_plotai": {
+     "reiksme": 229.1,
+     "kiekis": 69.5
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 31.4,
+     "kiekis": 69.5
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.24,
+     "kiekis": 5.6
+    },
+    "renovacija": {
+     "reiksme": 8.9,
+     "kiekis": 7
+    },
+    "renovacija_pradeta": {
+     "reiksme": 12.7,
+     "kiekis": 10
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 32.98,
+     "kiekis": 10
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.25,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.7,
+     "kiekis": 445
+    },
+    "senjoru_dalis": {
+     "reiksme": 22.3,
+     "kiekis": 677
+    }
+   },
+   "717006": {
+    "vaikai": {
+     "reiksme": 5.87,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 9.06,
+     "kiekis": 2
+    },
+    "socialines_paslaugos": {
+     "reiksme": 1,
+     "kiekis": 1
+    },
+    "zalieji_plotai": {
+     "reiksme": 1956.2,
+     "kiekis": 431.7
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 57.4,
+     "kiekis": 431.7
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.86,
+     "kiekis": 44.7
+    },
+    "renovacija": {
+     "reiksme": 3,
+     "kiekis": 2
+    },
+    "renovacija_pradeta": {
+     "reiksme": 3,
+     "kiekis": 2
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 36.25,
+     "kiekis": 8
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 11.73,
+     "kiekis": 4
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.5,
+     "kiekis": 341
+    },
+    "senjoru_dalis": {
+     "reiksme": 20.9,
+     "kiekis": 462
+    }
+   },
+   "714120": {
+    "vaikai": {
+     "reiksme": 3.56,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 5.96,
+     "kiekis": 2
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 657.5,
+     "kiekis": 220.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 32.9,
+     "kiekis": 220.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.15,
+     "kiekis": 7.2
+    },
+    "renovacija": {
+     "reiksme": 4.5,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": 18.2,
+     "kiekis": 4
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 11.92,
+     "kiekis": 4
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 3.56,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 16.8,
+     "kiekis": 562
+    },
+    "senjoru_dalis": {
+     "reiksme": 18.2,
+     "kiekis": 610
+    }
+   },
+   "717008": {
+    "vaikai": {
+     "reiksme": 1.37,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 5.68,
+     "kiekis": 2
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 405.6,
+     "kiekis": 142.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 19,
+     "kiekis": 142.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.07,
+     "kiekis": 3.7
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 11.36,
+     "kiekis": 4
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 20.7,
+     "kiekis": 730
+    },
+    "senjoru_dalis": {
+     "reiksme": 15.3,
+     "kiekis": 539
+    }
+   },
+   "714258": {
+    "vaikai": {
+     "reiksme": 2.69,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 5.39,
+     "kiekis": 2
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 121.9,
+     "kiekis": 45.2
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 13.6,
+     "kiekis": 45.2
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.05,
+     "kiekis": 2
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 2.69,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 2.69,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 1.34,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 20.0,
+     "kiekis": 744
+    },
+    "senjoru_dalis": {
+     "reiksme": 14.4,
+     "kiekis": 533
+    }
+   },
+   "714246": {
+    "vaikai": {
+     "reiksme": 8.36,
+     "kiekis": 5
+    },
+    "sveikata": {
+     "reiksme": 2.3,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 21.6,
+     "kiekis": 9.4
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 19.9,
+     "kiekis": 9.4
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.64,
+     "kiekis": 6.4
+    },
+    "renovacija": {
+     "reiksme": 11.1,
+     "kiekis": 4
+    },
+    "renovacija_pradeta": {
+     "reiksme": 11.1,
+     "kiekis": 4
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 13.8,
+     "kiekis": 6
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 16.72,
+     "kiekis": 10
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.8,
+     "kiekis": 598
+    },
+    "senjoru_dalis": {
+     "reiksme": 27.4,
+     "kiekis": 1192
+    }
+   },
+   "713786": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 3.4,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 30.1,
+     "kiekis": 8.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 48.2,
+     "kiekis": 8.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.01,
+     "kiekis": 3.8
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 3
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 4
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.5,
+     "kiekis": 427
+    },
+    "senjoru_dalis": {
+     "reiksme": 23.3,
+     "kiekis": 686
+    }
+   },
+   "716328": {
+    "vaikai": {
+     "reiksme": 2.33,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 10.94,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 35,
+     "kiekis": 9.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 32.7,
+     "kiekis": 9.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.78,
+     "kiekis": 5.6
+    },
+    "renovacija": {
+     "reiksme": 42.3,
+     "kiekis": 11
+    },
+    "renovacija_pradeta": {
+     "reiksme": 53.8,
+     "kiekis": 14
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 3.65,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.6,
+     "kiekis": 429
+    },
+    "senjoru_dalis": {
+     "reiksme": 22.9,
+     "kiekis": 628
+    }
+   },
+   "716330": {
+    "vaikai": {
+     "reiksme": 2.28,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 6.11,
+     "kiekis": 2
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 84.9,
+     "kiekis": 27.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 66.1,
+     "kiekis": 27.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 2.62,
+     "kiekis": 12
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 48.88,
+     "kiekis": 16
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 6.83,
+     "kiekis": 3
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.4,
+     "kiekis": 439
+    },
+    "senjoru_dalis": {
+     "reiksme": 25.1,
+     "kiekis": 821
+    }
+   },
+   "714684": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 4.03,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 26.6,
+     "kiekis": 6.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 45.1,
+     "kiekis": 6.6
+    },
+    "pesciuju_takai": {
+     "reiksme": null,
+     "kiekis": 2.7
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 4.03,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.94,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.7,
+     "kiekis": 340
+    },
+    "senjoru_dalis": {
+     "reiksme": 23.5,
+     "kiekis": 584
+    }
+   },
+   "716988": {
+    "vaikai": {
+     "reiksme": 7.84,
+     "kiekis": 4
+    },
+    "sveikata": {
+     "reiksme": 8.49,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 1,
+     "kiekis": 1
+    },
+    "zalieji_plotai": {
+     "reiksme": 136.9,
+     "kiekis": 48.4
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 39.3,
+     "kiekis": 48.4
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.01,
+     "kiekis": 16.6
+    },
+    "renovacija": {
+     "reiksme": 27.1,
+     "kiekis": 13
+    },
+    "renovacija_pradeta": {
+     "reiksme": 45.8,
+     "kiekis": 22
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 33.98,
+     "kiekis": 12
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 7.84,
+     "kiekis": 4
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.4,
+     "kiekis": 510
+    },
+    "senjoru_dalis": {
+     "reiksme": 21.7,
+     "kiekis": 768
+    }
+   },
+   "716332": {
+    "vaikai": {
+     "reiksme": 3.5,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 13.16,
+     "kiekis": 5
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 107.4,
+     "kiekis": 40.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 23.2,
+     "kiekis": 40.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.38,
+     "kiekis": 11.6
+    },
+    "renovacija": {
+     "reiksme": 23.5,
+     "kiekis": 8
+    },
+    "renovacija_pradeta": {
+     "reiksme": 23.5,
+     "kiekis": 8
+    },
+    "kultura": {
+     "reiksme": 5.26,
+     "kiekis": 2
+    },
+    "sportas": {
+     "reiksme": 7.89,
+     "kiekis": 3
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.0,
+     "kiekis": 571
+    },
+    "senjoru_dalis": {
+     "reiksme": 22.3,
+     "kiekis": 848
+    }
+   },
+   "716334": {
+    "vaikai": {
+     "reiksme": 6.25,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 25.3,
+     "kiekis": 6.1
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 47.1,
+     "kiekis": 6.1
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.06,
+     "kiekis": 2.5
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 2
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 4.15,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 3.12,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.3,
+     "kiekis": 320
+    },
+    "senjoru_dalis": {
+     "reiksme": 23.5,
+     "kiekis": 565
+    }
+   },
+   "716994": {
+    "vaikai": {
+     "reiksme": 4.44,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 9.37,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 30.7,
+     "kiekis": 9.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 28.5,
+     "kiekis": 9.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.65,
+     "kiekis": 4.7
+    },
+    "renovacija": {
+     "reiksme": 24,
+     "kiekis": 6
+    },
+    "renovacija_pradeta": {
+     "reiksme": 28,
+     "kiekis": 7
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 12.49,
+     "kiekis": 4
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 4.44,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.0,
+     "kiekis": 450
+    },
+    "senjoru_dalis": {
+     "reiksme": 22.6,
+     "kiekis": 723
+    }
+   },
+   "713788": {
+    "vaikai": {
+     "reiksme": 16.09,
+     "kiekis": 7
+    },
+    "sveikata": {
+     "reiksme": 3.2,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 176,
+     "kiekis": 55
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 14.5,
+     "kiekis": 55
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.2,
+     "kiekis": 15.5
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 10,
+     "kiekis": 2
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 25.59,
+     "kiekis": 8
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.3,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.9,
+     "kiekis": 435
+    },
+    "senjoru_dalis": {
+     "reiksme": 19.8,
+     "kiekis": 619
+    }
+   },
+   "714686": {
+    "vaikai": {
+     "reiksme": 4.15,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 2.76,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 1024,
+     "kiekis": 370.9
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 38.6,
+     "kiekis": 370.9
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.2,
+     "kiekis": 19.9
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 6.5,
+     "kiekis": 2
+    },
+    "kultura": {
+     "reiksme": 2.76,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 19.33,
+     "kiekis": 7
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.07,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.3,
+     "kiekis": 482
+    },
+    "senjoru_dalis": {
+     "reiksme": 20.4,
+     "kiekis": 738
+    }
+   },
+   "716996": {
+    "vaikai": {
+     "reiksme": 4.63,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 60.4,
+     "kiekis": 16.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 44.8,
+     "kiekis": 16.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.94,
+     "kiekis": 5
+    },
+    "renovacija": {
+     "reiksme": 83.8,
+     "kiekis": 31
+    },
+    "renovacija_pradeta": {
+     "reiksme": 94.6,
+     "kiekis": 35
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 54.05,
+     "kiekis": 15
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 4.63,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.6,
+     "kiekis": 432
+    },
+    "senjoru_dalis": {
+     "reiksme": 20.9,
+     "kiekis": 581
+    }
+   },
+   "717004": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 14.04,
+     "kiekis": 5
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 91.4,
+     "kiekis": 32.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 12.7,
+     "kiekis": 32.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.91,
+     "kiekis": 23.8
+    },
+    "renovacija": {
+     "reiksme": 34.9,
+     "kiekis": 15
+    },
+    "renovacija_pradeta": {
+     "reiksme": 34.9,
+     "kiekis": 15
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.6,
+     "kiekis": 554
+    },
+    "senjoru_dalis": {
+     "reiksme": 17.8,
+     "kiekis": 634
+    }
+   },
+   "714118": {
+    "vaikai": {
+     "reiksme": 4,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 5.65,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 2,
+     "kiekis": 2
+    },
+    "zalieji_plotai": {
+     "reiksme": 453.4,
+     "kiekis": 240.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 29.2,
+     "kiekis": 240.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.45,
+     "kiekis": 26.2
+    },
+    "renovacija": {
+     "reiksme": 24.3,
+     "kiekis": 18
+    },
+    "renovacija_pradeta": {
+     "reiksme": 32.4,
+     "kiekis": 24
+    },
+    "kultura": {
+     "reiksme": 1.88,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 15.06,
+     "kiekis": 8
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 4,
+     "kiekis": 3
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.1,
+     "kiekis": 750
+    },
+    "senjoru_dalis": {
+     "reiksme": 19.7,
+     "kiekis": 1046
+    }
+   },
+   "713118": {
+    "vaikai": {
+     "reiksme": 1.13,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 222,
+     "kiekis": 120.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 44.4,
+     "kiekis": 120.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.43,
+     "kiekis": 14.6
+    },
+    "renovacija": {
+     "reiksme": 3.4,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": 6.9,
+     "kiekis": 2
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 22.1,
+     "kiekis": 12
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 7.91,
+     "kiekis": 7
+    },
+    "vaiku_dalis": {
+     "reiksme": 16.3,
+     "kiekis": 885
+    },
+    "senjoru_dalis": {
+     "reiksme": 19.1,
+     "kiekis": 1040
+    }
+   },
+   "716318": {
+    "vaikai": {
+     "reiksme": 5.99,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 8.02,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 29.8,
+     "kiekis": 11.1
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 32.9,
+     "kiekis": 11.1
+    },
+    "pesciuju_takai": {
+     "reiksme": 3.71,
+     "kiekis": 14.1
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 2.67,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 29.41,
+     "kiekis": 11
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 7.98,
+     "kiekis": 4
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.4,
+     "kiekis": 501
+    },
+    "senjoru_dalis": {
+     "reiksme": 26.9,
+     "kiekis": 1006
+    }
+   },
+   "714654": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 64,
+     "kiekis": 20.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 41.8,
+     "kiekis": 20.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.11,
+     "kiekis": 8.9
+    },
+    "renovacija": {
+     "reiksme": 20,
+     "kiekis": 4
+    },
+    "renovacija_pradeta": {
+     "reiksme": 30,
+     "kiekis": 6
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 6.15,
+     "kiekis": 2
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.4,
+     "kiekis": 468
+    },
+    "senjoru_dalis": {
+     "reiksme": 18.4,
+     "kiekis": 600
+    }
+   },
+   "716320": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 3.79,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 85.3,
+     "kiekis": 22.5
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 39.7,
+     "kiekis": 22.5
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.01,
+     "kiekis": 9.7
+    },
+    "renovacija": {
+     "reiksme": 16,
+     "kiekis": 4
+    },
+    "renovacija_pradeta": {
+     "reiksme": 20,
+     "kiekis": 5
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 7.58,
+     "kiekis": 2
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 11.08,
+     "kiekis": 4
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.7,
+     "kiekis": 361
+    },
+    "senjoru_dalis": {
+     "reiksme": 26.4,
+     "kiekis": 697
+    }
+   },
+   "713220": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 20.53,
+     "kiekis": 5
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 19.8,
+     "kiekis": 4.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 22.7,
+     "kiekis": 4.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.9,
+     "kiekis": 5.7
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.4,
+     "kiekis": 350
+    },
+    "senjoru_dalis": {
+     "reiksme": 23.7,
+     "kiekis": 578
+    }
+   },
+   "716322": {
+    "vaikai": {
+     "reiksme": 3.89,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 24.4,
+     "kiekis": 5.2
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 19.1,
+     "kiekis": 5.2
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.88,
+     "kiekis": 5
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 28.2,
+     "kiekis": 6
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 12.1,
+     "kiekis": 257
+    },
+    "senjoru_dalis": {
+     "reiksme": 26.6,
+     "kiekis": 565
+    }
+   },
+   "716324": {
+    "vaikai": {
+     "reiksme": 2.81,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 20.5,
+     "kiekis": 5.5
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 29.3,
+     "kiekis": 5.5
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.86,
+     "kiekis": 5.5
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 2
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 3
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 3.72,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 8.43,
+     "kiekis": 3
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.2,
+     "kiekis": 356
+    },
+    "senjoru_dalis": {
+     "reiksme": 23.0,
+     "kiekis": 618
+    }
+   },
+   "713236": {
+    "vaikai": {
+     "reiksme": 16.85,
+     "kiekis": 6
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 40,
+     "kiekis": 11.1
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 52.2,
+     "kiekis": 11.1
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.8,
+     "kiekis": 4.9
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 21.66,
+     "kiekis": 6
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.81,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 12.9,
+     "kiekis": 356
+    },
+    "senjoru_dalis": {
+     "reiksme": 25.7,
+     "kiekis": 713
+    }
+   },
+   "714656": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 6.56,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 1,
+     "kiekis": 1
+    },
+    "zalieji_plotai": {
+     "reiksme": 20.8,
+     "kiekis": 9.5
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 38.1,
+     "kiekis": 9.5
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.49,
+     "kiekis": 6.3
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 4.37,
+     "kiekis": 2
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 6.24,
+     "kiekis": 4
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.0,
+     "kiekis": 641
+    },
+    "senjoru_dalis": {
+     "reiksme": 25.3,
+     "kiekis": 1158
+    }
+   },
+   "716326": {
+    "vaikai": {
+     "reiksme": 6.94,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 16.72,
+     "kiekis": 5
+    },
+    "socialines_paslaugos": {
+     "reiksme": 2,
+     "kiekis": 2
+    },
+    "zalieji_plotai": {
+     "reiksme": 32.9,
+     "kiekis": 9.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 29.8,
+     "kiekis": 9.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.09,
+     "kiekis": 7.2
+    },
+    "renovacija": {
+     "reiksme": 3.8,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": 7.7,
+     "kiekis": 2
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 23.41,
+     "kiekis": 7
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 4.63,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.4,
+     "kiekis": 432
+    },
+    "senjoru_dalis": {
+     "reiksme": 24.3,
+     "kiekis": 728
+    }
+   },
+   "714682": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 29.8,
+     "kiekis": 6.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 53.7,
+     "kiekis": 6.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.15,
+     "kiekis": 2.9
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 4.49,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.2,
+     "kiekis": 295
+    },
+    "senjoru_dalis": {
+     "reiksme": 25.2,
+     "kiekis": 562
+    }
+   },
+   "716940": {
+    "vaikai": {
+     "reiksme": 1.92,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 6.85,
+     "kiekis": 4
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 158.5,
+     "kiekis": 92.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 20.4,
+     "kiekis": 92.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.23,
+     "kiekis": 13.5
+    },
+    "renovacija": {
+     "reiksme": 21.2,
+     "kiekis": 7
+    },
+    "renovacija_pradeta": {
+     "reiksme": 36.4,
+     "kiekis": 12
+    },
+    "kultura": {
+     "reiksme": 1.71,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 10.27,
+     "kiekis": 6
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 1.92,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 17.8,
+     "kiekis": 1042
+    },
+    "senjoru_dalis": {
+     "reiksme": 16.7,
+     "kiekis": 973
+    }
+   },
+   "716942": {
+    "vaikai": {
+     "reiksme": 9.03,
+     "kiekis": 5
+    },
+    "sveikata": {
+     "reiksme": 8.66,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 7.6,
+     "kiekis": 2.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 11.9,
+     "kiekis": 2.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 2.98,
+     "kiekis": 10.7
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 23.09,
+     "kiekis": 8
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 3.61,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 16.0,
+     "kiekis": 554
+    },
+    "senjoru_dalis": {
+     "reiksme": 23.4,
+     "kiekis": 812
+    }
+   },
+   "716944": {
+    "vaikai": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 57.4,
+     "kiekis": 25.9
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 42.4,
+     "kiekis": 25.9
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.47,
+     "kiekis": 9.2
+    },
+    "renovacija": {
+     "reiksme": 7.1,
+     "kiekis": 2
+    },
+    "renovacija_pradeta": {
+     "reiksme": 7.1,
+     "kiekis": 2
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 15.5,
+     "kiekis": 7
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.9,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.3,
+     "kiekis": 689
+    },
+    "senjoru_dalis": {
+     "reiksme": 21.4,
+     "kiekis": 965
+    }
+   },
+   "716946": {
+    "vaikai": {
+     "reiksme": 3.15,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 10.31,
+     "kiekis": 4
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 48.6,
+     "kiekis": 18.8
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 37.2,
+     "kiekis": 18.8
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.07,
+     "kiekis": 8.7
+    },
+    "renovacija": {
+     "reiksme": 2.6,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": 2.6,
+     "kiekis": 1
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 12.88,
+     "kiekis": 5
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 6.3,
+     "kiekis": 4
+    },
+    "vaiku_dalis": {
+     "reiksme": 16.4,
+     "kiekis": 635
+    },
+    "senjoru_dalis": {
+     "reiksme": 21.3,
+     "kiekis": 827
+    }
+   },
+   "716948": {
+    "vaikai": {
+     "reiksme": 5.88,
+     "kiekis": 5
+    },
+    "sveikata": {
+     "reiksme": 5.61,
+     "kiekis": 3
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 22.7,
+     "kiekis": 12.1
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 26.8,
+     "kiekis": 12.1
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.41,
+     "kiekis": 9.9
+    },
+    "renovacija": {
+     "reiksme": 2.9,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": 2.9,
+     "kiekis": 1
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 13.08,
+     "kiekis": 7
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 3.53,
+     "kiekis": 3
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.9,
+     "kiekis": 850
+    },
+    "senjoru_dalis": {
+     "reiksme": 21.1,
+     "kiekis": 1131
+    }
+   },
+   "713192": {
+    "vaikai": {
+     "reiksme": 2.56,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 24,
+     "kiekis": 10
+    },
+    "socialines_paslaugos": {
+     "reiksme": 1,
+     "kiekis": 1
+    },
+    "zalieji_plotai": {
+     "reiksme": 38.3,
+     "kiekis": 16
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 23.5,
+     "kiekis": 16
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.24,
+     "kiekis": 12.8
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 2.4,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 16.8,
+     "kiekis": 7
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 1.28,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 18.7,
+     "kiekis": 781
+    },
+    "senjoru_dalis": {
+     "reiksme": 14.9,
+     "kiekis": 619
+    }
+   },
+   "713210": {
+    "vaikai": {
+     "reiksme": 3.94,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 2.19,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 24.7,
+     "kiekis": 11.3
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 36.6,
+     "kiekis": 11.3
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.53,
+     "kiekis": 8.4
+    },
+    "renovacija": {
+     "reiksme": 3.1,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": 3.1,
+     "kiekis": 1
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 1.31,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 16.7,
+     "kiekis": 762
+    },
+    "senjoru_dalis": {
+     "reiksme": 18.7,
+     "kiekis": 852
+    }
+   },
+   "716824": {
+    "vaikai": {
+     "reiksme": 1.38,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 2.64,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 267.1,
+     "kiekis": 101.2
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 48.8,
+     "kiekis": 101.2
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.57,
+     "kiekis": 11.7
+    },
+    "renovacija": {
+     "reiksme": 14.3,
+     "kiekis": 3
+    },
+    "renovacija_pradeta": {
+     "reiksme": 14.3,
+     "kiekis": 3
+    },
+    "kultura": {
+     "reiksme": 2.64,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": 7.92,
+     "kiekis": 3
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 11.07,
+     "kiekis": 8
+    },
+    "vaiku_dalis": {
+     "reiksme": 19.1,
+     "kiekis": 723
+    },
+    "senjoru_dalis": {
+     "reiksme": 12.7,
+     "kiekis": 480
+    }
+   },
+   "716950": {
+    "vaikai": {
+     "reiksme": 2.66,
+     "kiekis": 1
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 70.4,
+     "kiekis": 18.2
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 16.5,
+     "kiekis": 18.2
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.38,
+     "kiekis": 5.5
+    },
+    "renovacija": {
+     "reiksme": 28.6,
+     "kiekis": 6
+    },
+    "renovacija_pradeta": {
+     "reiksme": 28.6,
+     "kiekis": 6
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 3.86,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.66,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.5,
+     "kiekis": 376
+    },
+    "senjoru_dalis": {
+     "reiksme": 17.8,
+     "kiekis": 461
+    }
+   },
+   "713764": {
+    "vaikai": {
+     "reiksme": 8.96,
+     "kiekis": 3
+    },
+    "sveikata": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 98.5,
+     "kiekis": 23.9
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 33.2,
+     "kiekis": 23.9
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.2,
+     "kiekis": 1.8
+    },
+    "renovacija": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 4.11,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "vaiku_dalis": {
+     "reiksme": 13.8,
+     "kiekis": 335
+    },
+    "senjoru_dalis": {
+     "reiksme": 18.0,
+     "kiekis": 438
+    }
+   },
+   "716972": {
+    "vaikai": {
+     "reiksme": 2.93,
+     "kiekis": 2
+    },
+    "sveikata": {
+     "reiksme": 2.32,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 21.9,
+     "kiekis": 9.5
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 30.1,
+     "kiekis": 9.5
+    },
+    "pesciuju_takai": {
+     "reiksme": 1.25,
+     "kiekis": 6.7
+    },
+    "renovacija": {
+     "reiksme": 2.6,
+     "kiekis": 1
+    },
+    "renovacija_pradeta": {
+     "reiksme": 2.6,
+     "kiekis": 1
+    },
+    "kultura": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": 20.88,
+     "kiekis": 9
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.93,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.8,
+     "kiekis": 683
+    },
+    "senjoru_dalis": {
+     "reiksme": 16.0,
+     "kiekis": 691
+    }
+   }
+  }
+ },
+ "miestas": {
+  "vaikai": {
+   "reiksme": 4.02,
+   "kiekis": 189
+  },
+  "sveikata": {
+   "reiksme": 8.51,
+   "kiekis": 258
+  },
+  "socialines_paslaugos": {
+   "reiksme": 15,
+   "kiekis": 15
+  },
+  "zalieji_plotai": {
+   "reiksme": 170.3,
+   "kiekis": 5164.6
+  },
+  "zalieji_plotai_dalis": {
+   "reiksme": 32.9,
+   "kiekis": 5164.6
+  },
+  "pesciuju_takai": {
+   "reiksme": 0.54,
+   "kiekis": 924.3
+  },
+  "renovacija": {
+   "reiksme": 7.8,
+   "kiekis": 334
+  },
+  "renovacija_pradeta": {
+   "reiksme": 11.3,
+   "kiekis": 485
+  },
+  "kultura": {
+   "reiksme": 2.67,
+   "kiekis": 81
+  },
+  "sportas": {
+   "reiksme": 16.89,
+   "kiekis": 512
+  },
+  "zaidimu_aiksteles": {
+   "reiksme": 3.27,
+   "kiekis": 154
+  },
+  "vaiku_dalis": {
+   "reiksme": 15.5,
+   "kiekis": 47037
+  },
+  "senjoru_dalis": {
+   "reiksme": 21.1,
+   "kiekis": 64101
+  }
+ }
+}

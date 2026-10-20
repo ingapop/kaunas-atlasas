@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kauno vietovių atlasas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Layout: one app column; on wide containers the map sits left and the
+     reading panel right (container query, so it also works inside a narrow
+     embed block on kaunasgaligeriau.lt).
+     Colour: site tokens from kaunasgaligeriau.lt (same as v1). Large fields and
+     the map ramp use neutral blue; party green/pink only as balanced accents. */
+  :root {
+    color-scheme: light;
+    --bg: #f4f3f2;
+    --surface: #ffffff;
+    --surface-2: #eceef1;
+    --text-primary: #002b5b;
+    --text-secondary: #406084;
+    --text-muted: #5f728b;
+    --border: rgba(0,43,91,0.14);
+    --border-strong: rgba(0,43,91,0.28);
+    --accent: #0a5a92;
+    --accent-ink: #063f68;
+    --accent-soft: #e2edf5;
+    --brand-green: #00976f;
+    --brand-pink: #e852cc;
+    --brand-green-text: #00734f;
+    --brand-pink-text: #a3167f;
+    --seq-1: #dbe8f3;
+    --seq-2: #a9c8e3;
+    --seq-3: #6b9fcb;
+    --seq-4: #2f6ea6;
+    --seq-5: #0b3f6e;
+    --nodata: #d6d9de;
+    --stroke: #ffffff;
+    --warn-bg: #fff4d6;
+    --warn-ink: #6b4a00;
+    --font-display: "Unbounded", "Manrope", system-ui, sans-serif;
+    --font-body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0e1318; --surface: #171e25; --surface-2: #1d252d;
+      --text-primary: #f0f4f8; --text-secondary: #a9c0d6; --text-muted: #8396ab;
+      --border: rgba(255,255,255,0.12); --border-strong: rgba(255,255,255,0.26);
+      --accent: #3a8fce; --accent-ink: #7dc0ef; --accent-soft: #16293a;
+      --brand-green: #1fa87c; --brand-pink: #d95fbd;
+      --brand-green-text: #4fd6a8; --brand-pink-text: #f08fdd;
+      --seq-1: #1a2c3d; --seq-2: #22476a; --seq-3: #2f6ea6; --seq-4: #5f9ed3; --seq-5: #a8d1f2;
+      --nodata: #2a323b; --stroke: #0e1318;
+      --warn-bg: #3a2f12; --warn-ink: #f3d68a;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0e1318; --surface: #171e25; --surface-2: #1d252d;
+    --text-primary: #f0f4f8; --text-secondary: #a9c0d6; --text-muted: #8396ab;
+    --border: rgba(255,255,255,0.12); --border-strong: rgba(255,255,255,0.26);
+    --accent: #3a8fce; --accent-ink: #7dc0ef; --accent-soft: #16293a;
+    --brand-green: #1fa87c; --brand-pink: #d95fbd;
+    --brand-green-text: #4fd6a8; --brand-pink-text: #f08fdd;
+    --seq-1: #1a2c3d; --seq-2: #22476a; --seq-3: #2f6ea6; --seq-4: #5f9ed3; --seq-5: #a8d1f2;
+    --nodata: #2a323b; --stroke: #0e1318;
+    --warn-bg: #3a2f12; --warn-ink: #f3d68a;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .app {
+    container-type: inline-size;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-block: clamp(16px, 3vw, 40px) 48px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .embed .app { padding-block: 8px 16px; }
+  html.embed, html.embed body { overflow-y: hidden; }  /* the host frame takes our reported height */
+  .embed .site-only { display: none !important; }
+  .no-prog .prog-only { display: none !important; }  /* public build without the programme (K10) */
+
+  h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; overflow-wrap: anywhere; }
+  h1 { font-size: clamp(26px, 5vw, 48px); font-weight: 800; text-transform: uppercase; line-height: 1; }
+  h2 { font-size: clamp(19px, 2.6vw, 28px); font-weight: 700; text-transform: uppercase; line-height: 1.15; }
+  h3 { font-family: var(--font-body); font-size: 16px; font-weight: 700; }
+  .hd-green { color: var(--brand-green-text); }
+  .hd-pink { color: var(--brand-pink-text); }
+  .embed .hd-pink, .embed .hd-green { color: var(--text-primary); }
+  a { color: var(--accent-ink); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .eyebrow { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-ink); font-weight: 600; }
+  .muted { color: var(--text-muted); }
+  .num { font-variant-numeric: tabular-nums; }
+
+  /* header */
+  .hero { display: flex; flex-direction: column; gap: 10px; padding-bottom: 20px; border-bottom: 1px solid var(--border); margin-bottom: 18px; }
+  .brand-dots { display: inline-flex; gap: 6px; }
+  .brand-dots span { width: 10px; height: 10px; border-radius: 50%; }
+  .brand-dots span:first-child { background: var(--brand-green); }
+  .brand-dots span:last-child { background: var(--brand-pink); }
+  .lede { max-width: 64ch; color: var(--text-secondary); margin: 0; font-size: 16px; }
+
+  .draft { background: var(--warn-bg); color: var(--warn-ink); border-radius: 4px; padding: 10px 14px; font-size: 13.5px; margin-bottom: 16px; }
+  .draft strong { font-weight: 700; }
+
+  /* nav */
+  nav.tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+  nav.tabs a {
+    text-decoration: none; color: var(--text-secondary); font-weight: 600; font-size: 14px;
+    padding: 7px 14px; border-radius: 20px; border: 1px solid var(--border-strong); background: var(--surface);
+  }
+  nav.tabs a[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  /* controls */
+  .controls { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin-bottom: 12px; }
+  .seg { display: inline-flex; border: 1px solid var(--border-strong); border-radius: 20px; padding: 2px; background: var(--surface); gap: 2px; }
+  .seg button { font: inherit; font-size: 13px; font-weight: 600; padding: 5px 12px; border: 0; border-radius: 16px; background: transparent; color: var(--text-secondary); cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font: inherit; font-size: 13px; padding: 5px 11px; border-radius: 16px; cursor: pointer;
+    border: 1px solid var(--border-strong); background: var(--surface); color: var(--text-primary);
+  }
+  .chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-ink); font-weight: 600; }
+
+  /* layout */
+  .split { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @container (min-width: 860px) {
+    .split { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: start; }
+    .split .sticky { position: sticky; top: 12px; }
+  }
+  .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 18px 20px; min-width: 0; }
+  .stack { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+
+  /* map */
+  .map-wrap { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 8px; }
+  svg.map { width: 100%; height: auto; display: block; }
+  svg.map path.area { stroke: var(--stroke); stroke-width: 1; cursor: pointer; vector-effect: non-scaling-stroke; }
+  svg.map path.area:hover, svg.map path.area:focus-visible { stroke: var(--text-primary); stroke-width: 2; outline: none; }
+  svg.map path.area.sel { stroke: var(--brand-pink); stroke-width: 3; }
+  svg.map path.ctx { fill: none; stroke: var(--text-primary); stroke-width: 1.6; opacity: 0.55; pointer-events: none; vector-effect: non-scaling-stroke; }
+  svg.map text { font-family: var(--font-body); font-size: 19px; font-weight: 700; pointer-events: none; paint-order: stroke; stroke: var(--surface); stroke-width: 3px; fill: var(--text-primary); }
+  .tip {
+    position: absolute; pointer-events: none; background: var(--surface); color: var(--text-primary);
+    border: 1px solid var(--border-strong); border-radius: 4px; padding: 6px 9px; font-size: 12.5px;
+    box-shadow: 0 6px 18px -8px rgba(0,0,0,0.35); white-space: nowrap; z-index: 5;
+  }
+  .legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 12px; color: var(--text-muted); margin-top: 8px; }
+  .legend .sw { display: inline-flex; align-items: center; gap: 4px; }
+  .legend .sw i { width: 14px; height: 10px; border-radius: 2px; display: inline-block; }
+
+  /* ranked list */
+  .rank { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+  .rank li a { display: grid; grid-template-columns: minmax(0, 1fr) minmax(60px, 38%) auto; gap: 10px; align-items: center; padding: 6px 8px; border-radius: 4px; text-decoration: none; color: var(--text-primary); }
+  .rank li a:hover { background: var(--surface-2); }
+  .rank .bar { height: 8px; background: var(--surface-2); border-radius: 4px; overflow: hidden; }
+  .rank .bar i { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+  .rank .v { font-family: var(--font-mono); font-size: 12.5px; text-align: right; }
+  .rank .city a, .rank li.city > div { color: var(--text-muted); }
+
+  /* area page */
+  .crumbs { font-size: 13px; display: flex; flex-wrap: wrap; gap: 6px; color: var(--text-muted); margin-bottom: 8px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13.5px; color: var(--text-secondary); margin-top: 8px; }
+  .facts b { color: var(--text-primary); font-variant-numeric: tabular-nums; }
+  .ind-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 10px 0; border-top: 1px solid var(--border); }
+  .ind-row:first-child { border-top: 0; }
+  .ind-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .ind-head a { font-weight: 600; text-decoration: none; color: var(--text-primary); }
+  .ind-head a:hover { text-decoration: underline; }
+  .ind-head .val { font-family: var(--font-mono); font-size: 13px; }
+  .strip { position: relative; height: 22px; }
+  .strip .track { position: absolute; left: 0; right: 0; top: 10px; height: 2px; background: var(--border-strong); }
+  .strip .o { position: absolute; top: 7px; width: 8px; height: 8px; border-radius: 50%; background: var(--seq-2); transform: translateX(-50%); }
+  .strip .city { position: absolute; top: 3px; width: 2px; height: 16px; background: var(--text-muted); transform: translateX(-50%); }
+  .strip .me { position: absolute; top: 4px; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 2px solid var(--surface); transform: translateX(-50%); }
+  .ind-note { font-size: 12.5px; color: var(--text-muted); }
+
+  .prop-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .prop-list li { border: 1px solid var(--border); border-radius: 5px; padding: 10px 12px; background: var(--surface); }
+  .prop-list a.t { font-weight: 700; text-decoration: none; color: var(--text-primary); }
+  .prop-list a.t:hover { text-decoration: underline; }
+  .why { font-size: 12.5px; color: var(--text-muted); margin-top: 3px; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 2px 7px; border-radius: 10px; background: var(--accent-soft); color: var(--accent-ink); margin-right: 6px; vertical-align: 1px; }
+
+  /* programme */
+  .chapters { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  @container (min-width: 760px) { .chapters { grid-template-columns: 1fr 1fr; } }
+  .chapter h3 { margin-bottom: 6px; }
+  .chapter ol { margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 3px; }
+  .chapter li a { text-decoration: none; color: var(--text-primary); font-size: 14px; }
+  .chapter li a:hover { text-decoration: underline; }
+  .chapter .sid { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); margin-right: 6px; }
+  .dot-ind { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); margin-left: 6px; vertical-align: 2px; }
+  .placeholder { border: 1.5px dashed var(--border-strong); border-radius: 6px; padding: 14px 16px; color: var(--text-secondary); background: var(--surface-2); font-size: 14px; }
+  ul.plain { margin: 6px 0 0; padding-left: 20px; }
+  ul.plain li { margin: 3px 0; }
+
+  /* Political-ad label (VRK atmintinė 2026-07-23; Reg. (EU) 2025/1410: dark text on light background,
+     visible without extra actions). Never hidden, also in ?embed=1. */
+  .pr-label { background: #ffffff; color: #002b5b; border: 1px solid rgba(0,43,91,0.28); border-radius: 4px; padding: 8px 12px; font-size: 13px; margin-bottom: 16px; }
+  .pr-label strong { text-transform: uppercase; letter-spacing: 0.02em; }
+  footer.site { border-top: 1px solid var(--border); margin-top: 28px; padding-top: 14px; font-size: 12px; color: var(--text-muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+  .loading { padding: 40px 0; color: var(--text-muted); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    svg.map path.area { transition: fill 200ms ease; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="hero site-only">
+    <span class="brand-dots" aria-hidden="true"><span></span><span></span></span>
+    <span class="eyebrow">Kaunas gali geriau – miesto duomenys<span class="prog-only"> ir programa</span></span>
+    <h1 class="hd-green">Kauno vietovių atlasas</h1>
+    <p class="lede">Kaip gyvena kiekviena Kauno seniūnija ir rinkimų apylinkė: darželiai ir mokyklos, sveikatos priežiūra, žaluma, renovacija – teritorijos palygintos tarpusavyje.<span class="prog-only"> Ir ką siūlome ten, kur atsilikta.</span></p>
+  </header>
+
+  <p class="pr-label"><strong>Politinė reklama.</strong> Atlasą neatlygintinai parengė Inga Popovaitė, Lietuvos žaliųjų partijos narė, koalicijos „Kaunas gali geriau“ (Laisvės partija ir Lietuvos žaliųjų partija) kampanijai. Skirta 2027 m. savivaldybių tarybų ir merų rinkimams.</p>
+
+  <div id="draft" class="draft" hidden></div>
+
+  <nav class="tabs" aria-label="Atlaso dalys">
+    <a href="#/" data-tab="map">Žemėlapis</a>
+    <a href="#/programa" data-tab="prog" class="prog-only">Programa</a>
+    <a href="#/apie" data-tab="about">Apie duomenis</a>
+  </nav>
+
+  <main id="view"><p class="loading">Įkeliama…</p></main>
+
+  <footer class="site">
+    <span>Neatlygintinai parengė Inga Popovaitė (LŽP) koalicijai „Kaunas gali geriau“ (LP ir LŽP) · <a href="#/apie">Apie duomenis</a></span>
+    <span><span id="foot-date"></span> · © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> bendraautoriai</span>
+  </footer>
+</div>
+
+<script src="data/atlas_data.js"></script><!-- window.ATLAS_DATA; built by scripts/23_v2_standalone.py, works from file:// -->
+<script>
+/* ===== state & data ===== */
+const S = { level: 'seniunijos', ind: null, geo: {}, R: null, P: null, proj: null };
+const LEVELS = { seniunijos: { one: 'seniūnija', many: 'Seniūnijos', prefix: 's' }, apylinkes: { one: 'rinkimų apylinkė', many: 'Apylinkės', prefix: 'a' } };
+const fmt = (v, d) => {
+  if (v == null) return '–';
+  const n = Number(v), dd = d ?? (Math.abs(n) < 100 && !Number.isInteger(n) ? 1 : 0);
+  return n.toLocaleString('lt-LT', { minimumFractionDigits: dd, maximumFractionDigits: dd });  // 4,02 → „4,0“, not „4“
+};
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+async function load() {
+  // data/atlas_data.js (or the inlined copy in dist/atlasas.html) sets window.ATLAS_DATA = {"data/...": {...}}
+  const inline = window.ATLAS_DATA || {};
+  const get = p => inline[p] ? Promise.resolve(inline[p])
+    : fetch(p).then(r => { if (!r.ok) throw new Error(p); return r.json(); });
+  const [sen, apy, R, P] = await Promise.all([
+    get('data/seniunijos.geojson'), get('data/apylinkes.geojson'), get('data/rodikliai.json'), get('data/programa.json')
+  ]);
+  S.geo = { seniunijos: sen, apylinkes: apy };
+  S.R = R; S.P = P;
+  S.ind = R.rodikliai[0].id;
+  S.proj = makeProjection(sen);
+  S.sections = (P.skyriai || []).flatMap(ch => ch.skyriai.map(s => ({ ...s, skyrius: ch })));
+  if (!S.sections.length) document.documentElement.classList.add('no-prog');
+  S.byName = {};
+  for (const f of sen.features) S.byName[f.properties.pavadinimas] = f.properties.id;
+  const drafts = [];
+  if (R.busena === 'DEMO') drafts.push('rodikliai dar rengiami (rodomi tik 2021 m. surašymo duomenys)');
+  else if (R.busena !== 'PARENGTA') drafts.push('rodikliai dar tikrinami');
+  if (/JUODRA/.test(P.busena || '')) drafts.push('programos tekstas – juodraštis');
+  if (drafts.length) {
+    const el = document.getElementById('draft');
+    el.innerHTML = `<strong>Darbinė versija – neplatinti.</strong> ${drafts.join('; ')}.`;
+    el.hidden = false;
+  }
+  document.getElementById('foot-date').textContent = `Duomenys parengti ${R.sugeneruota}`;
+}
+
+/* ===== geometry: equirectangular projection fitted to the city ===== */
+function eachRing(geom, fn) {
+  const polys = geom.type === 'Polygon' ? [geom.coordinates] : geom.coordinates;
+  polys.forEach(p => p.forEach(fn));
+}
+function makeProjection(fc) {
+  let x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
+  fc.features.forEach(f => eachRing(f.geometry, r => r.forEach(([x, y]) => { x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y); })));
+  const k = Math.cos(((y0 + y1) / 2) * Math.PI / 180);
+  const W = 1000, pad = 12, sx = (W - 2 * pad) / ((x1 - x0) * k);
+  const H = Math.round((y1 - y0) * sx + 2 * pad);
+  return { W, H, p: ([x, y]) => [pad + (x - x0) * k * sx, pad + (y1 - y) * sx] };
+}
+function pathD(geom) {
+  let d = '';
+  eachRing(geom, r => { d += 'M' + r.map(c => S.proj.p(c).map(n => n.toFixed(1)).join(',')).join('L') + 'Z'; });
+  return d;
+}
+function centroid(geom) {           // area-weighted centroid of the largest ring
+  let best = null, bestA = 0;
+  eachRing(geom, r => {
+    let a = 0, cx = 0, cy = 0;
+    const pts = r.map(S.proj.p);
+    for (let i = 0; i < pts.length - 1; i++) {
+      const [x0, y0] = pts[i], [x1, y1] = pts[i + 1], c = x0 * y1 - x1 * y0;
+      a += c; cx += (x0 + x1) * c; cy += (y0 + y1) * c;
+    }
+    if (Math.abs(a) > bestA) { bestA = Math.abs(a); best = [cx / (3 * a), cy / (3 * a)]; }
+  });
+  return best;
+}
+
+/* ===== values & colour ===== */
+const indMeta = id => S.R.rodikliai.find(r => r.id === id);
+const val = (level, uid, ind) => S.R.reiksmes[level]?.[uid]?.[ind]?.reiksme ?? null;
+const cityVal = ind => S.R.miestas[ind]?.reiksme ?? null;
+function breaks(level, ind) {        // quintile class breaks over areas with data
+  const vs = S.geo[level].features.map(f => val(level, f.properties.id, ind)).filter(v => v != null).sort((a, b) => a - b);
+  if (!vs.length) return [];
+  return [1, 2, 3, 4].map(q => vs[Math.min(vs.length - 1, Math.floor(q * vs.length / 5))]);
+}
+function colorVar(v, br) {
+  if (v == null) return 'var(--nodata)';
+  let c = 1; br.forEach(b => { if (v >= b) c++; });
+  return `var(--seq-${Math.min(c, 5)})`;
+}
+function areaId(level, uid) { return `${LEVELS[level].prefix}-${uid}`; }
+function parseAreaId(s) {
+  const [p, uid] = s.split('-');
+  const level = p === 'a' ? 'apylinkes' : 'seniunijos';
+  const f = S.geo[level].features.find(f => f.properties.id === uid);
+  return f ? { level, f } : null;
+}
+function areaName(level, p) { return level === 'seniunijos' ? `${p.pavadinimas} seniūnija` : `${p.pavadinimas} apylinkė`; }
+
+/* ===== map component ===== */
+function mapSVG(level, ind, selectedUid, ctxSeniunija) {
+  const br = breaks(level, ind);
+  const fc = S.geo[level];
+  const paths = fc.features.map(f => {
+    const p = f.properties, v = val(level, p.id, ind);
+    const label = `${areaName(level, p)}: ${fmt(v)} ${indMeta(ind)?.vienetas || ''}`;
+    return `<path class="area${p.id === selectedUid ? ' sel' : ''}" d="${pathD(f.geometry)}" fill="${colorVar(v, br)}"
+      data-id="${areaId(level, p.id)}" data-tip="${esc(label)}" tabindex="0" role="link" aria-label="${esc(label)}"></path>`;
+  }).join('');
+  let ctx = '';
+  if (level === 'apylinkes') ctx = S.geo.seniunijos.features.map(f => `<path class="ctx" d="${pathD(f.geometry)}"></path>`).join('');
+  let labels = '';
+  if (level === 'seniunijos') labels = fc.features.filter(f => f.properties.plotas_km2 > 5).map(f => {
+    const [x, y] = centroid(f.geometry);
+    return `<text x="${x.toFixed(0)}" y="${y.toFixed(0)}" text-anchor="middle">${esc(f.properties.pavadinimas)}</text>`;
+  }).join('');
+  const m = indMeta(ind);
+  const legend = br.length ? `<div class="legend" aria-hidden="true"><span>mažiau</span>${[1,2,3,4,5].map(i => `<span class="sw"><i style="background:var(--seq-${i})"></i></span>`).join('')}<span>daugiau</span><span class="sw"><i style="background:var(--nodata)"></i>nėra duomenų</span><span>· ${esc(m?.vienetas || '')}</span></div>` : '';
+  return `<div class="map-wrap"><svg class="map" viewBox="0 0 ${S.proj.W} ${S.proj.H}" role="group" aria-label="Kauno žemėlapis: ${esc(m?.pavadinimas || '')}">${paths}${ctx}${labels}</svg><div class="tip" hidden></div></div>${legend}`;
+}
+function wireMap(root) {
+  const wrap = root.querySelector('.map-wrap'); if (!wrap) return;
+  const tip = wrap.querySelector('.tip');
+  wrap.querySelectorAll('path.area').forEach(p => {
+    const go = () => { location.hash = `#/vieta/${p.dataset.id}`; };
+    p.addEventListener('click', go);
+    p.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+    p.addEventListener('mousemove', e => {
+      const r = wrap.getBoundingClientRect();
+      tip.textContent = p.dataset.tip; tip.hidden = false;
+      const x = Math.min(e.clientX - r.left + 12, r.width - tip.offsetWidth - 4);
+      tip.style.left = `${Math.max(4, x)}px`; tip.style.top = `${e.clientY - r.top + 14}px`;
+    });
+    p.addEventListener('mouseleave', () => { tip.hidden = true; });
+  });
+}
+
+/* ===== shared bits ===== */
+function controls() {
+  const lv = Object.entries(LEVELS).map(([k, l]) => `<button type="button" data-level="${k}" aria-pressed="${S.level === k}">${l.many}</button>`).join('');
+  const chips = S.R.rodikliai.map(r => `<button type="button" class="chip" data-ind="${r.id}" aria-pressed="${S.ind === r.id}">${esc(r.pavadinimas)}</button>`).join('');
+  return `<div class="controls"><div class="seg" role="group" aria-label="Teritorijos">${lv}</div></div><div class="chips" role="group" aria-label="Rodiklis">${chips}</div>`;
+}
+function wireControls(root, rerender) {
+  root.querySelectorAll('[data-level]').forEach(b => b.addEventListener('click', () => { S.level = b.dataset.level; rerender(); }));
+  root.querySelectorAll('[data-ind]').forEach(b => b.addEventListener('click', () => { S.ind = b.dataset.ind; rerender(); }));
+}
+function rankList(level, ind, limit) {
+  const m = indMeta(ind);
+  const rows = S.geo[level].features.map(f => ({ p: f.properties, v: val(level, f.properties.id, ind) }))
+    .sort((a, b) => (b.v ?? -Infinity) - (a.v ?? -Infinity));
+  const max = Math.max(...rows.map(r => r.v ?? 0), cityVal(ind) ?? 0) || 1;
+  const shown = limit ? rows.slice(0, limit) : rows;
+  const li = shown.map(r => `<li><a href="#/vieta/${areaId(level, r.p.id)}"><span>${esc(r.p.pavadinimas)}</span><span class="bar"><i style="width:${r.v == null ? 0 : (100 * r.v / max).toFixed(1)}%"></i></span><span class="v">${fmt(r.v)}</span></a></li>`).join('');
+  const c = cityVal(ind);
+  const city = c == null ? '' : `<li class="city"><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;padding:6px 8px;border-top:1px solid var(--border)"><span>Kauno miestas</span><span class="v">${fmt(c)}</span></div></li>`;
+  return `<ol class="rank">${li}${city}</ol><p class="ind-note">${esc(m.vienetas)} · ${esc(m.saltinis)}</p>`;
+}
+function sectionsForInd(ind) { return S.sections.filter(s => (s.rodikliai || []).includes(ind)); }
+function secLink(s) { return `<a class="t" href="#/programa/${s.id}">${s.id}. ${esc(s.pavadinimas)}</a>`; }
+
+/* ===== views ===== */
+function viewMap(root) {
+  const m = indMeta(S.ind);
+  const progs = sectionsForInd(S.ind);
+  root.innerHTML = `
+    <div class="split">
+      <div class="stack">
+        <h2 class="hd-pink">${esc(m.pavadinimas)}: ${LEVELS[S.level].many.toLowerCase()}</h2>
+        ${m.tipas ? `<p class="ind-note" style="margin:0"><span class="tag">${esc(m.tipas)}</span>${esc(m.skaiciavimas)}</p>` : ''}
+        <p class="muted" style="margin:0">${esc(m.aprasymas)} Spustelėkite teritoriją, kad matytumėte jos rodiklius<span class="prog-only"> ir mūsų pasiūlymus</span>.</p>
+        ${controls()}
+        ${mapSVG(S.level, S.ind)}
+      </div>
+      <div class="stack sticky">
+        <section class="panel" aria-labelledby="rk">
+          <h3 id="rk">${LEVELS[S.level].many} pagal rodiklį</h3>
+          ${rankList(S.level, S.ind, S.level === 'apylinkes' ? 15 : 0)}
+          ${S.level === 'apylinkes' ? '<p class="ind-note">Rodoma 15 apylinkių su didžiausiomis reikšmėmis; visos – žemėlapyje.</p>' : ''}
+        </section>
+        ${progs.length ? `<section class="panel"><h3>Ką siūlome šioje srityje</h3><ul class="prop-list" style="margin-top:10px">${progs.map(s => `<li>${secLink(s)}<div class="why">${esc(s.skyrius.pavadinimas)}</div></li>`).join('')}</ul></section>` : ''}
+      </div>
+    </div>`;
+  wireControls(root, () => viewMap(root));
+  wireMap(root);
+}
+
+function weakIndicators(level, uid) {
+  // An indicator is "weak" here if this area is in the lower third of its level
+  // (direction-aware). Context indicators never count.
+  const out = [];
+  for (const m of S.R.rodikliai) {
+    if (m.kryptis === 'kontekstas') continue;
+    const v = val(level, uid, m.id); if (v == null) continue;
+    const vs = S.geo[level].features.map(f => val(level, f.properties.id, m.id)).filter(x => x != null);
+    const worse = vs.filter(x => m.kryptis === 'maziau' ? x > v : x < v).length;
+    const share = worse / Math.max(1, vs.length - 1);   // 0 = worst
+    if (share <= 1 / 3) out.push({ m, v, share });
+  }
+  return out.sort((a, b) => a.share - b.share);
+}
+
+function viewArea(root, key) {
+  const hit = parseAreaId(key);
+  if (!hit) { root.innerHTML = `<p>Teritorija nerasta. <a href="#/">Grįžti į žemėlapį</a></p>`; return; }
+  const { level, f } = hit, p = f.properties;
+  S.level = level;
+  const parent = level === 'apylinkes' && S.byName[p.seniunija] ? `<a href="#/vieta/s-${S.byName[p.seniunija]}">${esc(p.seniunija)} seniūnija</a>` : '';
+  const kids = level === 'seniunijos' ? S.geo.apylinkes.features.filter(a => a.properties.seniunija === p.pavadinimas) : [];
+
+  const rows = S.R.rodikliai.map(m => {
+    const v = val(level, p.id, m.id), c = cityVal(m.id);
+    const vs = S.geo[level].features.map(x => val(level, x.properties.id, m.id)).filter(x => x != null);
+    const lo = Math.min(...vs, c ?? Infinity), hi = Math.max(...vs, c ?? -Infinity);
+    const pos = x => hi > lo ? (100 * (x - lo) / (hi - lo)).toFixed(1) : 50;
+    const strip = vs.length ? `<div class="strip" aria-hidden="true"><div class="track"></div>${vs.map(x => `<span class="o" style="left:${pos(x)}%"></span>`).join('')}${c != null ? `<span class="city" style="left:${pos(c)}%"></span>` : ''}${v != null ? `<span class="me" style="left:${pos(v)}%"></span>` : ''}</div>` : '';
+    return `<div class="ind-row"><div class="ind-head"><a href="#/" data-goind="${m.id}">${esc(m.pavadinimas)}</a><span class="val">${fmt(v)} <span class="muted">· miestas ${fmt(c)}</span></span></div>${strip}<div class="ind-note">${esc(m.vienetas)}</div></div>`;
+  }).join('');
+
+  // „Ką siūlome čia“: hand-assigned first, then automatic from weak indicators.
+  const myKeys = [areaId(level, p.id), p.pavadinimas, level === 'apylinkes' ? `s-${S.byName[p.seniunija]}` : null].filter(Boolean);
+  const hand = S.sections.filter(s => (s.priskirta_vietoms || []).some(k => myKeys.includes(k)));
+  const weak = weakIndicators(level, p.id);
+  const auto = [];
+  // Keep it short: the 3 weakest indicators, up to 2 programme sections each.
+  for (const w of weak.slice(0, 3)) {
+    sectionsForInd(w.m.id).filter(s => !hand.includes(s) && !auto.some(a => a.s === s)).slice(0, 2).forEach(s => auto.push({ s, w }));
+  }
+  const props = [
+    ...hand.map(s => `<li><span class="tag">Konkrečiai čia</span>${secLink(s)}<div class="why">${esc(s.skyrius.pavadinimas)}</div></li>`),
+    ...auto.map(({ s, w }) => `<li>${secLink(s)}<div class="why">Rodiklis „${esc(w.m.pavadinimas)}“ čia mažesnis nei daugumoje ${level === 'seniunijos' ? 'seniūnijų' : 'apylinkių'} (${fmt(w.v)} ${esc(w.m.vienetas)}).</div></li>`),
+  ].join('');
+
+  root.innerHTML = `
+    <div class="crumbs"><a href="#/">Žemėlapis</a>${parent ? ' › ' + parent : ''}</div>
+    <div class="split">
+      <div class="stack">
+        <div>
+          <h2 class="hd-pink">${esc(areaName(level, p))}</h2>
+          <div class="facts"><span>Gyventojų (2021 m.): <b>${fmt(p.gyventojai_2021)}</b></span><span>Plotas: <b>${fmt(p.plotas_km2, 1)} km²</b></span>${kids.length ? `<span>Rinkimų apylinkių: <b>${kids.length}</b></span>` : ''}</div>
+        </div>
+        ${mapSVG(level, S.ind, p.id)}
+        <section class="panel"><h3>Rodikliai, palyginti su kitomis ${level === 'seniunijos' ? 'seniūnijomis' : 'apylinkėmis'}</h3>
+          <p class="ind-note" style="margin:4px 0 6px">Didelis taškas – ši ${LEVELS[level].one}, maži – kitos ${level === 'seniunijos' ? 'seniūnijos' : 'apylinkės'}, brūkšnys – Kauno miestas.</p>
+          ${rows}
+        </section>
+      </div>
+      <div class="stack sticky">
+        <section class="panel prog-only"><h3>Ką siūlome čia</h3>
+          ${props ? `<ul class="prop-list" style="margin-top:10px">${props}</ul>` : `<p class="placeholder" style="margin-top:10px">Kai parengsime paslaugų rodiklius, čia matysite programos punktus, skirtus būtent šiai teritorijai, ir punktus apie sritis, kuriose ji atsilieka.</p>`}
+        </section>
+        ${kids.length ? `<section class="panel"><h3>Rinkimų apylinkės</h3><ul class="plain">${kids.map(a => `<li><a href="#/vieta/a-${a.properties.id}">${esc(a.properties.pavadinimas)}</a></li>`).join('')}</ul></section>` : ''}
+      </div>
+    </div>`;
+  root.querySelectorAll('[data-goind]').forEach(a => a.addEventListener('click', () => { S.ind = a.dataset.goind; }));
+  wireMap(root);
+}
+
+function viewProgramme(root) {
+  if (!S.sections.length) { root.innerHTML = `<p class="placeholder">Programa bus paskelbta vėliau. <a href="#/">Į žemėlapį</a></p>`; return; }
+  const chs = S.P.skyriai.map(ch => `
+    <section class="panel chapter"><h3>${ch.id}. ${esc(ch.pavadinimas)}</h3>
+      <ol>${ch.skyriai.map(s => `<li><a href="#/programa/${s.id}"><span class="sid">${s.id}</span>${esc(s.pavadinimas)}</a>${(s.rodikliai || []).length ? '<span class="dot-ind" title="Susieta su atlaso rodikliais"></span>' : ''}</li>`).join('')}</ol>
+    </section>`).join('');
+  root.innerHTML = `
+    <div class="stack">
+      <h2 class="hd-pink">Programa</h2>
+      <p class="muted" style="margin:0;max-width:64ch">Dešimt sričių. Taškas <span class="dot-ind" style="margin:0 2px"></span> žymi skyrius, susietus su atlaso rodikliais – juose rasite ir seniūnijų palyginimą.</p>
+      <div class="chapters">${chs}</div>
+    </div>`;
+}
+
+function viewSection(root, sid) {
+  const s = S.sections.find(x => x.id === sid);
+  if (!s) { root.innerHTML = `<p>Skyrius nerastas. <a href="#/programa">Visa programa</a></p>`; return; }
+  const inds = (s.rodikliai || []).map(indMeta).filter(Boolean);
+  const places = [...new Set([...(s.priskirta_vietoms || []), ...(s.vietos_paminetos || [])])];
+  root.innerHTML = `
+    <div class="crumbs"><a href="#/programa">Programa</a> › ${s.skyrius.id}. ${esc(s.skyrius.pavadinimas)}</div>
+    <div class="split">
+      <div class="stack">
+        <div><span class="eyebrow">${s.id}</span><h2 class="hd-pink">${esc(s.pavadinimas)}</h2></div>
+        ${s.santrauka ? `<p style="max-width:64ch">${esc(s.santrauka)}</p>` : `<p class="placeholder">Santrauka rengiama.</p>`}
+        ${s.pasiulymai.length ? `<section class="panel"><h3>Ką darysime</h3><ul class="plain">${s.pasiulymai.map(x => `<li>${esc(x)}</li>`).join('')}</ul></section>` : ''}
+        ${s.nuoroda ? `<p><a href="${esc(s.nuoroda)}" target="_top">Visas programos tekstas →</a></p>` : ''}
+      </div>
+      <div class="stack sticky">
+        ${inds.length ? `<section class="panel"><h3>Kodėl: duomenys</h3>${inds.map(m => { const lv = 'seniunijos'; return `<p class="ind-note" style="margin:8px 0 4px"><a href="#/" data-goind="${m.id}">${esc(m.pavadinimas)}</a> – ${esc(m.aprasymas)}</p>${rankList(lv, m.id)}`; }).join('')}</section>` : ''}
+        ${places.length ? `<section class="panel"><h3>Minimos vietos</h3><p class="ind-note" style="margin:4px 0 0">${places.map(esc).join(', ')}</p></section>` : ''}
+      </div>
+    </div>`;
+  root.querySelectorAll('[data-goind]').forEach(a => a.addEventListener('click', () => { S.ind = a.dataset.goind; S.level = 'seniunijos'; }));
+}
+
+function viewAbout(root) {
+  const items = S.R.rodikliai.map(m => `<li><b>${esc(m.pavadinimas)}</b> (${esc(m.vienetas)}) – ${esc(m.aprasymas)}${m.skaiciavimas ? ` Skaičiuojama: ${esc(m.skaiciavimas)}.` : ''} <span class="muted">Šaltinis: ${esc(m.saltinis)}, ${esc(m.data)}.</span></li>`).join('');
+  root.innerHTML = `
+    <div class="stack" style="max-width:72ch">
+      <h2 class="hd-pink">Apie duomenis</h2>
+      <p>Atlasas rodo viešai prieinamus duomenis apie Kauno seniūnijas (9) ir rinkimų apylinkes (90). Rodikliai yra kelių rūšių: kiek įstaigų, vietų ar ploto tenka gyventojams ar vaikams; kokią dalį sudaro tam tikra grupė (pvz., renovuoti daugiabučiai ar žalieji plotai); dviejų dydžių santykis; paprastas kiekis. Prie kiekvieno rodiklio nurodyta, kaip jis skaičiuojamas. Kur įmanoma, rodiklis susietas su gyventojų skaičiumi arba plotu, kad didesnės teritorijos neturėtų pranašumo vien dėl dydžio.</p>
+      <h3>Rodikliai</h3><ul class="plain">${items}</ul>
+      <h3>Svarbu</h3>
+      <ul class="plain">
+        <li>Rodikliai rodo paslaugų ir infrastruktūros <b>pasiūlą</b> – ne jų kokybę ir ne tai, ar yra laisvų vietų.</li>
+        <li>Žmonės naudojasi paslaugomis ir už savo teritorijos ribų – ypač prie ribų ir miesto centre.</li>
+        <li>Gyventojų skaičius imtas iš 2021 m. surašymo. Kai kuriose teritorijose, ypač naujuose kvartaluose, jis nuo to laiko pasikeitė.</li>
+        <li>Tai nėra oficiali statistika.</li>
+      </ul>
+      <h3>Kas parengė</h3>
+      <p>Atlasą iš viešų duomenų neatlygintinai parengė Inga Popovaitė, Lietuvos žaliųjų partijos narė, koalicijos „Kaunas gali geriau“ (Laisvės partija ir Lietuvos žaliųjų partija) kampanijai. Skirta 2027 m. savivaldybių tarybų ir merų rinkimams. Duomenis teikiančios institucijos atlaso nerengė ir jo nevertina. Teritoriją pasirenkate patys – atlasas nenustato jūsų buvimo vietos.</p>
+      <p class="ind-note">Žemėlapio ir dalies rodiklių duomenys © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap bendraautoriai</a>, licencija ODbL. Seniūnijų ribos – Registrų centras (CC BY 4.0); rinkimų apylinkių ribos (2024 m. Seimo rinkimų; 2027 m. apylinkės dar nepaskelbtos) ir rinkėjų skaičius – © Vyriausioji rinkimų komisija; gyventojai – 2021 m. gyventojų ir būstų surašymas (Valstybės duomenų agentūra, CC BY 4.0); renovacija – Aplinkos projektų valdymo agentūra (APVA); švietimo įstaigos – Švietimo ir mokslo institucijų registras (ŠMIR); socialinių paslaugų vietos – Kauno miesto socialinių paslaugų centras (kaunospc.lt).</p>
+    </div>`;
+}
+
+/* ===== router + embed ===== */
+function route() {
+  const root = document.getElementById('view');
+  const h = location.hash.replace(/^#\/?/, '');
+  const [a, b] = h.split('/');
+  document.querySelectorAll('nav.tabs a').forEach(x => x.removeAttribute('aria-current'));
+  const tab = a === 'programa' ? 'prog' : a === 'apie' ? 'about' : 'map';
+  document.querySelector(`nav.tabs a[data-tab="${tab}"]`).setAttribute('aria-current', 'page');
+  if (a === 'vieta' && b) viewArea(root, b);
+  else if (a === 'programa' && b) viewSection(root, b);
+  else if (a === 'programa') viewProgramme(root);
+  else if (a === 'apie') viewAbout(root);
+  else viewMap(root);
+  if (!S.firstRoute) root.closest('.app').scrollIntoView({ block: 'start' });
+  S.firstRoute = false;
+  postToHost({ type: 'kgg-atlas:route', hash: location.hash });
+}
+
+// Embedding on kaunasgaligeriau.lt: ?embed=1 hides our header/footer, and the
+// page reports its height and route to the host so the frame can resize and
+// mirror the deep link. Explicit flag only: a plain iframe (Wix HTML block,
+// Artifact viewer) keeps the header, the footer attribution and scrolling.
+const EMBED = new URLSearchParams(location.search).get('embed') === '1';
+if (EMBED) document.documentElement.classList.add('embed');
+function postToHost(msg) { if (window.parent !== window) window.parent.postMessage(msg, '*'); }
+if (EMBED && 'ResizeObserver' in window) {
+  const app = document.querySelector('.app');
+  const report = () => postToHost({ type: 'kgg-atlas:height', height: Math.ceil(app.getBoundingClientRect().height) });
+  new ResizeObserver(report).observe(app);
+  window.addEventListener('load', report);
+}
+
+S.firstRoute = true;
+load().then(() => { route(); window.addEventListener('hashchange', route); })
+  .catch(err => { document.getElementById('view').innerHTML = `<p>Nepavyko įkelti duomenų (${esc(err.message)}).</p>`; });
+</script>
+</body>
+</html>

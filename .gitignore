@@ -1,0 +1,4 @@
+data/raw/
+v2/dist/
+__pycache__/
+.env

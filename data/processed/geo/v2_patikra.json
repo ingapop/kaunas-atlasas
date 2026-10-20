@@ -1,0 +1,739 @@
+{
+ "vienetai": {
+  "seniunijos": 9,
+  "apylinkes": 90
+ },
+ "census": {
+  "kauno_m_langeliai": 6488,
+  "kauno_m_gyv": 303202,
+  "0_14_intervalas": [
+   41411,
+   57917,
+   13.66,
+   19.1
+  ],
+  "65_intervalas": [
+   58074,
+   73913,
+   19.15,
+   24.38
+  ],
+  "osp_2021_01_01": {
+   "gyv": 298753.0,
+   "0_14": 46154.0,
+   "65": 63221.0,
+   "0_14_proc": 15.45,
+   "65_proc": 21.16
+  },
+  "ivertis_0_14": [
+   47037,
+   15.51
+  ],
+  "ivertis_65": [
+   64101,
+   21.14
+  ],
+  "kiti_langeliai_mieste": {
+   "langeliai": 0,
+   "gyv_pilni_langeliai": 0,
+   "gyv_ploto_dalimi": 0,
+   "pavadinimai": {}
+  },
+  "kauno_m_langeliai_uz_miesto_ribos": {
+   "langeliai": 57,
+   "gyv": 543
+  },
+  "orphans_seniunijos": {
+   "cells": 57,
+   "pop": 543
+  },
+  "orphans_apylinkes": {
+   "cells": 57,
+   "pop": 543
+  }
+ },
+ "smir": {
+  "istaigos": 189,
+  "darzeliai": 129,
+  "bendrojo": 83,
+  "kodai_su_keliais_taskais": 1
+ },
+ "socialiniai_taskai_seniunijose": [
+  [
+   "Kauno m. socialinių paslaugų centras (administracija)",
+   "Dainavos sen."
+  ],
+  [
+   "Bendruomeninių paslaugų skyrius - maisto pagalba (Petrašiūnų-Gričiupio r.)",
+   "Petrašiūnų-Gričiupio sen."
+  ],
+  [
+   "Bendruomeninių paslaugų skyrius (Aleksoto r.)",
+   "Aleksoto sen."
+  ],
+  [
+   "Bendruomeninių paslaugų skyrius (Centro-Žaliakalnio r.)",
+   "Centro-Žaliakalnio sen."
+  ],
+  [
+   "Bendruomeninių paslaugų skyrius (Dainavos r.)",
+   "Dainavos sen."
+  ],
+  [
+   "Bendruomeninių paslaugų skyrius (Eigulių r.)",
+   "Eigulių sen."
+  ],
+  [
+   "Bendruomeninių paslaugų skyrius (Panemunės-Šančių r.)",
+   "Panemunės-Šančių sen."
+  ],
+  [
+   "Bendruomeninių paslaugų skyrius (Šilainių r.)",
+   "Šilainių sen."
+  ],
+  [
+   "Bendruomeninių paslaugų skyrius (Vilijampolės r.)",
+   "Vilijampolės sen."
+  ],
+  [
+   "Šeimos paslaugų skyrius (pagrindinis)",
+   "Petrašiūnų-Gričiupio sen."
+  ],
+  [
+   "Psichologinės pagalbos skyrius",
+   "Centro-Žaliakalnio sen."
+  ],
+  [
+   "Šeimos krizių centras (visą parą)",
+   "Panemunės-Šančių sen."
+  ],
+  [
+   "Laikino apnakvindinimo paslaugos",
+   "Petrašiūnų-Gričiupio sen."
+  ],
+  [
+   "Dainavos dienos globos centras",
+   "Dainavos sen."
+  ],
+  [
+   "Dienos centras \"Demencija\"",
+   "Panemunės-Šančių sen."
+  ]
+ ],
+ "zaluma_sajunga_ha_bbox": 34732.3,
+ "miestas_patikra": {
+  "vaikai": {
+   "reiksme": 4.02,
+   "kiekis": 189
+  },
+  "sveikata": {
+   "reiksme": 8.51,
+   "kiekis": 258
+  },
+  "socialines_paslaugos": {
+   "reiksme": 15,
+   "kiekis": 15
+  },
+  "zalieji_plotai": {
+   "reiksme": 170.3,
+   "kiekis": 5164.6
+  },
+  "zalieji_plotai_dalis": {
+   "reiksme": 32.9,
+   "kiekis": 5164.6
+  },
+  "pesciuju_takai": {
+   "reiksme": 0.54,
+   "kiekis": 924.3
+  },
+  "renovacija": {
+   "reiksme": 7.8,
+   "kiekis": 334
+  },
+  "renovacija_pradeta": {
+   "reiksme": 11.3,
+   "kiekis": 485
+  },
+  "sportas": {
+   "reiksme": 16.89,
+   "kiekis": 512
+  },
+  "zaidimu_aiksteles": {
+   "reiksme": 3.27,
+   "kiekis": 154
+  },
+  "vaiku_dalis": {
+   "reiksme": 15.5,
+   "kiekis": 47037
+  },
+  "senjoru_dalis": {
+   "reiksme": 21.1,
+   "kiekis": 64101
+  },
+  "tankis": {
+   "reiksme": 1933,
+   "kiekis": 303202
+  },
+  "_vardikliai": {
+   "gyv": 303202,
+   "vaik": 47037,
+   "s65": 64101,
+   "reno_vardiklis": 4308,
+   "plotas_km2": 156.885,
+   "gatviu_km": 1727.2
+  }
+ },
+ "sumos_seniunijos_apylinkes_miestas": {
+  "vaikai": [
+   189,
+   189,
+   189
+  ],
+  "sveikata": [
+   258,
+   258,
+   258
+  ],
+  "socialines": [
+   15,
+   15,
+   15
+  ],
+  "sportas": [
+   512,
+   512,
+   512
+  ],
+  "aikstele": [
+   154,
+   154,
+   154
+  ],
+  "reno_baigta": [
+   334,
+   334,
+   334
+  ],
+  "reno_vykdoma": [
+   151,
+   151,
+   151
+  ],
+  "reno_potencialus": [
+   3823,
+   3823,
+   3823
+  ],
+  "zaluma_m2": [
+   51646110.7,
+   51643923.4,
+   51646113.3
+  ],
+  "takai_m": [
+   924325.8,
+   924346.2,
+   924326.1
+  ],
+  "gatves_m": [
+   1727181.7,
+   1727185.9,
+   1727181.7
+  ],
+  "den_gyv": [
+   303202,
+   303202,
+   303202
+  ],
+  "den_vaik": [
+   47037,
+   47037,
+   47037
+  ],
+  "den_s65": [
+   64101,
+   64101,
+   64101
+  ]
+ },
+ "osm_po_dublikatu": {
+  "sveikata_vaistines": 276,
+  "sportas_ir_aiksteles": 765
+ },
+ "null_patikra": {
+  "seniunijos": {
+   "vaikai": 1,
+   "sveikata": 1,
+   "zalieji_plotai": 1,
+   "sportas": 1,
+   "zaidimu_aiksteles": 1,
+   "vaiku_dalis": 1,
+   "senjoru_dalis": 1
+  },
+  "apylinkes": {
+   "renovacija": 21,
+   "renovacija_pradeta": 21,
+   "vaikai": 6,
+   "sveikata": 4,
+   "zalieji_plotai": 4,
+   "sportas": 4,
+   "zaidimu_aiksteles": 6,
+   "vaiku_dalis": 4,
+   "senjoru_dalis": 4,
+   "pesciuju_takai": 2
+  }
+ },
+ "palyginta_reiksmiu": 1300,
+ "skirtumu": 0,
+ "spot": {
+  "seniunijos:1911": {
+   "gyv": 55239,
+   "vaik": 10201,
+   "s65": 8832,
+   "reno_den": 316,
+   "r": {
+    "vaikai": 2.74,
+    "sveikata": 7.06,
+    "socialines_paslaugos": 1,
+    "zalieji_plotai": 135.9,
+    "zalieji_plotai_dalis": 32.1,
+    "pesciuju_takai": 0.49,
+    "renovacija": 6.3,
+    "renovacija_pradeta": 8.2,
+    "sportas": 10.68,
+    "zaidimu_aiksteles": 2.84,
+    "vaiku_dalis": 18.5,
+    "senjoru_dalis": 16.0,
+    "tankis": 2362
+   },
+   "k": {
+    "vaikai": 28,
+    "sveikata": 39,
+    "socialines_paslaugos": 1,
+    "zalieji_plotai": 750.7,
+    "zalieji_plotai_dalis": 750.7,
+    "pesciuju_takai": 126.8,
+    "renovacija": 20,
+    "renovacija_pradeta": 26,
+    "sportas": 59,
+    "zaidimu_aiksteles": 29,
+    "vaiku_dalis": 10201,
+    "senjoru_dalis": 8832,
+    "tankis": 55239
+   },
+   "svetaine": {
+    "vaikai": {
+     "reiksme": 2.74,
+     "kiekis": 28
+    },
+    "sveikata": {
+     "reiksme": 7.06,
+     "kiekis": 39
+    },
+    "socialines_paslaugos": {
+     "reiksme": 1,
+     "kiekis": 1
+    },
+    "zalieji_plotai": {
+     "reiksme": 135.9,
+     "kiekis": 750.7
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 32.1,
+     "kiekis": 750.7
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.49,
+     "kiekis": 126.8
+    },
+    "renovacija": {
+     "reiksme": 6.3,
+     "kiekis": 20
+    },
+    "renovacija_pradeta": {
+     "reiksme": 8.2,
+     "kiekis": 26
+    },
+    "sportas": {
+     "reiksme": 10.68,
+     "kiekis": 59
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 2.84,
+     "kiekis": 29
+    },
+    "vaiku_dalis": {
+     "reiksme": 18.5,
+     "kiekis": 10201
+    },
+    "senjoru_dalis": {
+     "reiksme": 16.0,
+     "kiekis": 8832
+    },
+    "tankis": {
+     "reiksme": 2362,
+     "kiekis": 55239
+    }
+   }
+  },
+  "seniunijos:9508": {
+   "gyv": 38904,
+   "vaik": 5467,
+   "s65": 8601,
+   "reno_den": 397,
+   "r": {
+    "vaikai": 5.49,
+    "sveikata": 5.91,
+    "socialines_paslaugos": 3,
+    "zalieji_plotai": 244.4,
+    "zalieji_plotai_dalis": 29.5,
+    "pesciuju_takai": 0.41,
+    "renovacija": 23.9,
+    "renovacija_pradeta": 30.7,
+    "sportas": 20.05,
+    "zaidimu_aiksteles": 4.57,
+    "vaiku_dalis": 14.1,
+    "senjoru_dalis": 22.1,
+    "tankis": 1206
+   },
+   "k": {
+    "vaikai": 30,
+    "sveikata": 23,
+    "socialines_paslaugos": 3,
+    "zalieji_plotai": 950.9,
+    "zalieji_plotai_dalis": 950.9,
+    "pesciuju_takai": 148.7,
+    "renovacija": 95,
+    "renovacija_pradeta": 122,
+    "sportas": 78,
+    "zaidimu_aiksteles": 25,
+    "vaiku_dalis": 5467,
+    "senjoru_dalis": 8601,
+    "tankis": 38904
+   },
+   "svetaine": {
+    "vaikai": {
+     "reiksme": 5.49,
+     "kiekis": 30
+    },
+    "sveikata": {
+     "reiksme": 5.91,
+     "kiekis": 23
+    },
+    "socialines_paslaugos": {
+     "reiksme": 3,
+     "kiekis": 3
+    },
+    "zalieji_plotai": {
+     "reiksme": 244.4,
+     "kiekis": 950.9
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 29.5,
+     "kiekis": 950.9
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.41,
+     "kiekis": 148.7
+    },
+    "renovacija": {
+     "reiksme": 23.9,
+     "kiekis": 95
+    },
+    "renovacija_pradeta": {
+     "reiksme": 30.7,
+     "kiekis": 122
+    },
+    "sportas": {
+     "reiksme": 20.05,
+     "kiekis": 78
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 4.57,
+     "kiekis": 25
+    },
+    "vaiku_dalis": {
+     "reiksme": 14.1,
+     "kiekis": 5467
+    },
+    "senjoru_dalis": {
+     "reiksme": 22.1,
+     "kiekis": 8601
+    },
+    "tankis": {
+     "reiksme": 1206,
+     "kiekis": 38904
+    }
+   }
+  },
+  "seniunijos:9505": {
+   "gyv": 1161,
+   "vaik": 180,
+   "s65": 244,
+   "reno_den": 35,
+   "r": {
+    "vaikai": null,
+    "sveikata": null,
+    "socialines_paslaugos": 0,
+    "zalieji_plotai": null,
+    "zalieji_plotai_dalis": 32.1,
+    "pesciuju_takai": 0.75,
+    "renovacija": 0.0,
+    "renovacija_pradeta": 0.0,
+    "sportas": null,
+    "zaidimu_aiksteles": null,
+    "vaiku_dalis": null,
+    "senjoru_dalis": null,
+    "tankis": 292
+   },
+   "k": {
+    "vaikai": 0,
+    "sveikata": 0,
+    "socialines_paslaugos": 0,
+    "zalieji_plotai": 127.6,
+    "zalieji_plotai_dalis": 127.6,
+    "pesciuju_takai": 20.2,
+    "renovacija": 0,
+    "renovacija_pradeta": 0,
+    "sportas": 18,
+    "zaidimu_aiksteles": 2,
+    "vaiku_dalis": 180,
+    "senjoru_dalis": 244,
+    "tankis": 1161
+   },
+   "svetaine": {
+    "vaikai": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": null,
+     "kiekis": 127.6
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 32.1,
+     "kiekis": 127.6
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.75,
+     "kiekis": 20.2
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "sportas": {
+     "reiksme": null,
+     "kiekis": 18
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": null,
+     "kiekis": 2
+    },
+    "vaiku_dalis": {
+     "reiksme": null,
+     "kiekis": 180
+    },
+    "senjoru_dalis": {
+     "reiksme": null,
+     "kiekis": 244
+    },
+    "tankis": {
+     "reiksme": 292,
+     "kiekis": 1161
+    }
+   }
+  },
+  "apylinkes:717042": {
+   "gyv": 6497,
+   "vaik": 977,
+   "s65": 1505,
+   "reno_den": 202,
+   "r": {
+    "vaikai": 4.09,
+    "sveikata": 10.77,
+    "socialines_paslaugos": 0,
+    "zalieji_plotai": 137.8,
+    "zalieji_plotai_dalis": 38.6,
+    "pesciuju_takai": 0.86,
+    "renovacija": 5.0,
+    "renovacija_pradeta": 9.4,
+    "sportas": 69.26,
+    "zaidimu_aiksteles": 3.07,
+    "vaiku_dalis": 15.0,
+    "senjoru_dalis": 23.2,
+    "tankis": 2800
+   },
+   "k": {
+    "vaikai": 4,
+    "sveikata": 7,
+    "socialines_paslaugos": 0,
+    "zalieji_plotai": 89.5,
+    "zalieji_plotai_dalis": 89.5,
+    "pesciuju_takai": 30.1,
+    "renovacija": 10,
+    "renovacija_pradeta": 19,
+    "sportas": 45,
+    "zaidimu_aiksteles": 3,
+    "vaiku_dalis": 977,
+    "senjoru_dalis": 1505,
+    "tankis": 6497
+   },
+   "svetaine": {
+    "vaikai": {
+     "reiksme": 4.09,
+     "kiekis": 4
+    },
+    "sveikata": {
+     "reiksme": 10.77,
+     "kiekis": 7
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": 137.8,
+     "kiekis": 89.5
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 38.6,
+     "kiekis": 89.5
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.86,
+     "kiekis": 30.1
+    },
+    "renovacija": {
+     "reiksme": 5,
+     "kiekis": 10
+    },
+    "renovacija_pradeta": {
+     "reiksme": 9.4,
+     "kiekis": 19
+    },
+    "sportas": {
+     "reiksme": 69.26,
+     "kiekis": 45
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": 3.07,
+     "kiekis": 3
+    },
+    "vaiku_dalis": {
+     "reiksme": 15.0,
+     "kiekis": 977
+    },
+    "senjoru_dalis": {
+     "reiksme": 23.2,
+     "kiekis": 1505
+    },
+    "tankis": {
+     "reiksme": 2800,
+     "kiekis": 6497
+    }
+   }
+  },
+  "apylinkes:716992": {
+   "gyv": 694,
+   "vaik": 108,
+   "s65": 155,
+   "reno_den": 33,
+   "r": {
+    "vaikai": null,
+    "sveikata": null,
+    "socialines_paslaugos": 0,
+    "zalieji_plotai": null,
+    "zalieji_plotai_dalis": 20.5,
+    "pesciuju_takai": 0.5,
+    "renovacija": 0.0,
+    "renovacija_pradeta": 3.0,
+    "sportas": null,
+    "zaidimu_aiksteles": null,
+    "vaiku_dalis": null,
+    "senjoru_dalis": null,
+    "tankis": 954
+   },
+   "k": {
+    "vaikai": 0,
+    "sveikata": 1,
+    "socialines_paslaugos": 0,
+    "zalieji_plotai": 14.9,
+    "zalieji_plotai_dalis": 14.9,
+    "pesciuju_takai": 5.4,
+    "renovacija": 0,
+    "renovacija_pradeta": 1,
+    "sportas": 1,
+    "zaidimu_aiksteles": 1,
+    "vaiku_dalis": 108,
+    "senjoru_dalis": 155,
+    "tankis": 694
+   },
+   "svetaine": {
+    "vaikai": {
+     "reiksme": null,
+     "kiekis": 0
+    },
+    "sveikata": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "socialines_paslaugos": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "zalieji_plotai": {
+     "reiksme": null,
+     "kiekis": 14.9
+    },
+    "zalieji_plotai_dalis": {
+     "reiksme": 20.5,
+     "kiekis": 14.9
+    },
+    "pesciuju_takai": {
+     "reiksme": 0.5,
+     "kiekis": 5.4
+    },
+    "renovacija": {
+     "reiksme": 0,
+     "kiekis": 0
+    },
+    "renovacija_pradeta": {
+     "reiksme": 3,
+     "kiekis": 1
+    },
+    "sportas": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "zaidimu_aiksteles": {
+     "reiksme": null,
+     "kiekis": 1
+    },
+    "vaiku_dalis": {
+     "reiksme": null,
+     "kiekis": 108
+    },
+    "senjoru_dalis": {
+     "reiksme": null,
+     "kiekis": 155
+    },
+    "tankis": {
+     "reiksme": 954,
+     "kiekis": 694
+    }
+   }
+  }
+ }
+}
